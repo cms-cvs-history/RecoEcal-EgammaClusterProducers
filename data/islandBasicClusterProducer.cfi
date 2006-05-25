@@ -4,6 +4,6 @@ module islandBasicClusterProducer = IslandClusterProducer
   string hitCollection = "EcalRecHitsEB"
   string hitProducer = "ecalrechit"
   string clusterCollection = "islandBasicClusterCollection"
-  double IslandBarrelSeedThr = .5
-  double IslandEndcapSeedThr = .18
+  untracked double IslandBarrelSeedThr = .5
+  untracked double IslandEndcapSeedThr = .18
 }
