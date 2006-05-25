@@ -1,0 +1,5 @@
+# Island SuperCluster producer
+module islandSuperClusterProducer = SuperClusterProducer
+{
+  string superclusterCollection = "islandSuperClusterCollection"
+}
