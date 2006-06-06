@@ -1,9 +1,0 @@
-# Island BasicCluster producer
-module islandBasicClusterProducer = IslandClusterProducer
-{
-  string hitCollection = "EcalRecHitsEB"
-  string hitProducer = "ecalrechit"
-  string clusterCollection = "islandBasicClusterCollection"
-  untracked double IslandBarrelSeedThr = .5
-  untracked double IslandEndcapSeedThr = .18
-}
