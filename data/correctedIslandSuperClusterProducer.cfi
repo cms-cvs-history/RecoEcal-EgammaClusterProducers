@@ -4,9 +4,9 @@ module correctedIslandSuperClusterProducer = EgammaSCCorrectionMaker
   string recHitProducer = "ecalrechit"
   string recHitCollection = "EcalRecHitsEB"
   string rawSuperClusterProducer = "islandSuperClusterProducer"
-  string rawSuperClusterCollection = "islandSuperClusterCollection"
+  string rawSuperClusterCollection = "islandBarrelSuperClusterCollection"
   string superClusterAlgo = "Island"
   double sigmaElectronicNoise = 0.03
   bool applyEnergyCorrection = true
-  string corectedSuperClusterCollection = "correctedIslandSuperClusterCollection"
+  string corectedSuperClusterCollection = "correctedIslandBarrelSuperClusterCollection"
 }

@@ -1,5 +1,16 @@
 # Island SuperCluster producer
 module islandSuperClusterProducer = SuperClusterProducer
 {
-  string superclusterCollection = "islandSuperClusterCollection"
+    string endcapClusterProducer = "islandBasicClusterProducer"
+    string barrelClusterProducer = "islandBasicClusterProducer"
+    string endcapClusterCollection = "islandEndcapClusterCollection"
+    string barrelClusterCollection = "islandBarrelClusterCollection"
+    string endcapSuperclusterCollection = "islandEndcapSuperClusterCollection"
+    string barrelSuperclusterCollection = "islandBarrelSuperClusterCollection"
+
+    double barrelEtaSearchRoad = 0.06
+    double barrelPhiSearchRoad = 0.80
+    double endcapEtaSearchRoad = 0.14
+    double endcapPhiSearchRoad = 0.40
+    double seedEnergyThreshold = 0.40
 }

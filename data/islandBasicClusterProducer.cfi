@@ -1,9 +1,18 @@
 # Island BasicCluster producer
 module islandBasicClusterProducer = IslandClusterProducer
 {
-  string hitCollection = "EcalRecHitsEB"
-  string hitProducer = "ecalrechit"
-  string clusterCollection = "islandBasicClusterCollection"
-  untracked double IslandBarrelSeedThr = .5
-  untracked double IslandEndcapSeedThr = .18
+    string barrelHitProducer   = "ecalrechit"
+    string endcapHitProducer   = "ecalrechit"
+    string barrelHitCollection = "EcalRecHitsEB"
+    string endcapHitCollection = "EcalRecHitsEE"
+    string barrelClusterCollection = "islandBarrelClusterCollection"
+    string endcapClusterCollection = "islandEndcapClusterCollection"
+
+    double IslandBarrelSeedThr = 0.50
+    double IslandEndcapSeedThr = 0.18
+
+    bool coretools_logweight = true
+    double coretools_x0 = 0.89
+    double coretools_t0 = 6.2
+    double coretools_w0 = 4.0
 }
