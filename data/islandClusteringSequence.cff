@@ -1,3 +1,6 @@
+#
+# $Id: $
+#
 #------------------
 #Island clustering:
 #------------------
@@ -12,7 +15,8 @@ include "RecoEcal/EgammaClusterProducers/data/islandSuperClusterProducer.cfi"
 include "RecoEcal/EgammaClusterProducers/data/correctedIslandSuperClusterProducer.cfi"
 
 # create sequence for island clustering
-sequence islandClusteringSequence =  {
+sequence islandClusteringSequence = {
              islandBasicClusterProducer,
              islandSuperClusterProducer,
-             correctedIslandSuperClusterProducer }
+             correctedIslandSuperClusterProducerBarrel,
+             correctedIslandSuperClusterProducerEndcap }

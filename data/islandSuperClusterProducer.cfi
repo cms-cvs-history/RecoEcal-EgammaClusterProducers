@@ -1,3 +1,6 @@
+#
+# $Id: $
+#
 # Island SuperCluster producer
 module islandSuperClusterProducer = SuperClusterProducer
 {
@@ -12,5 +15,5 @@ module islandSuperClusterProducer = SuperClusterProducer
     double barrelPhiSearchRoad = 0.80
     double endcapEtaSearchRoad = 0.14
     double endcapPhiSearchRoad = 0.40
-    double seedEnergyThreshold = 0.40
+    double seedEnergyThreshold = 3.00
 }

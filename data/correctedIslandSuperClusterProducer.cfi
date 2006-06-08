@@ -1,5 +1,8 @@
+#
+# $Id: $
+#
 # Energy scale correction for Island SuperClusters
-module correctedIslandSuperClusterProducer = EgammaSCCorrectionMaker
+module correctedIslandSuperClusterProducerBarrel = EgammaSCCorrectionMaker
 {
   string recHitProducer = "ecalrechit"
   string recHitCollection = "EcalRecHitsEB"
@@ -9,4 +12,16 @@ module correctedIslandSuperClusterProducer = EgammaSCCorrectionMaker
   double sigmaElectronicNoise = 0.03
   bool applyEnergyCorrection = true
   string corectedSuperClusterCollection = "correctedIslandBarrelSuperClusterCollection"
+}
+
+module correctedIslandSuperClusterProducerEndcap = EgammaSCCorrectionMaker
+{
+  string recHitProducer = "ecalrechit"
+  string recHitCollection = "EcalRecHitsEE"
+  string rawSuperClusterProducer = "islandSuperClusterProducer"
+  string rawSuperClusterCollection = "islandEndcapSuperClusterCollection"
+  string superClusterAlgo = "Island"
+  double sigmaElectronicNoise = 0.03
+  bool applyEnergyCorrection = true
+  string corectedSuperClusterCollection = "correctedIslandEndcapSuperClusterCollection"
 }
