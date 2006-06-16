@@ -19,7 +19,7 @@
     double coretools_w0=4.0
 
     # output collections
-    string clustershapecollection = "HybridClusterShapeCollection"
-    string basicclusterCollection = "HybridBasicClusterCollection"
-    string superclusterCollection = "HybridSuperClusterCollection"
+    string clustershapecollection = ""
+    string basicclusterCollection = ""
+    string superclusterCollection = ""
   }

@@ -3,10 +3,12 @@ module islandBasicClusterProducer = IslandClusterProducer
 {
     string barrelHitProducer   = "ecalrechit"
     string endcapHitProducer   = "ecalrechit"
+
     string barrelHitCollection = "EcalRecHitsEB"
     string endcapHitCollection = "EcalRecHitsEE"
-    string barrelClusterCollection = "islandBarrelClusterCollection"
-    string endcapClusterCollection = "islandEndcapClusterCollection"
+
+    string barrelClusterCollection = "islandBarrelBasicClusterCollection"
+    string endcapClusterCollection = "islandEndcapBasicClusterCollection"
 
     double IslandBarrelSeedThr = 0.50
     double IslandEndcapSeedThr = 0.18

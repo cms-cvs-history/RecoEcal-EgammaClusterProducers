@@ -1,7 +1,7 @@
 #
 #  simple analyzer to make histos within a framework job off the super clusters in the event
 #  Author: Shahram Rahatlou, University of Rome & INFN
-#  $Id: egammaSimpleAnalyzer.cfi,v 1.1 2006/05/25 10:42:33 rahatlou Exp $
+#  $Id: egammaSimpleAnalyzer.cfi,v 1.2 2006/06/06 20:26:09 tsirig Exp $
 #
 module egammaSimpleAnalyzer = EgammaSimpleAnalyzer {
 
@@ -11,19 +11,19 @@ module egammaSimpleAnalyzer = EgammaSimpleAnalyzer {
   double xMinHist = 0.
   double xMaxHist = 60.
 
+  string islandBasicClusterProducer   = "islandBasicClusterProducer"
   string islandBasicClusterCollection = "islandBarrelBasicClusterCollection"
-  string islandBasicClusterProducer = "islandBasicClusterProducer"
 
+  string islandSuperClusterProducer   = "islandSuperClusterProducer"
   string islandSuperClusterCollection = "islandBarrelSuperClusterCollection"
-  string islandSuperClusterProducer = "islandSuperClusterProducer"
 
-  string correctedIslandSuperClusterCollection = "correctedIslandBarrelSuperClusterCollection"
-  string correctedIslandSuperClusterProducer = "correctedIslandSuperClusterProducer"
+  string correctedIslandSuperClusterProducer   = "correctedIslandBarrelSuperClusterProducer"
+  string correctedIslandSuperClusterCollection = ""
 
-  string hybridSuperClusterCollection = "HybridSuperClusterCollection"
-  string hybridSuperClusterProducer = "hybridSuperClusterProducer"
+  string hybridSuperClusterProducer   = "hybridSuperClusterProducer"
+  string hybridSuperClusterCollection = ""
 
-  string correctedHybridSuperClusterCollection = "correctedHybridSuperClusterCollection"
-  string correctedHybridSuperClusterProducer = "correctedHybridSuperClusterProducer"
+  string correctedHybridSuperClusterProducer   = "correctedHybridSuperClusterProducer"
+  string correctedHybridSuperClusterCollection = ""
 
 }

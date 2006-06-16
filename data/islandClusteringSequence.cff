@@ -1,5 +1,5 @@
 #
-# $Id: $
+# $Id: islandClusteringSequence.cff,v 1.2 2006/06/08 12:25:11 rahatlou Exp $
 #
 #------------------
 #Island clustering:
@@ -18,5 +18,5 @@ include "RecoEcal/EgammaClusterProducers/data/correctedIslandSuperClusterProduce
 sequence islandClusteringSequence = {
              islandBasicClusterProducer,
              islandSuperClusterProducer,
-             correctedIslandSuperClusterProducerBarrel,
-             correctedIslandSuperClusterProducerEndcap }
+             correctedIslandBarrelSuperClusterProducer,
+             correctedIslandEndcapSuperClusterProducer }

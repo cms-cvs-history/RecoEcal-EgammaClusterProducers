@@ -4,10 +4,10 @@ module correctedHybridSuperClusterProducer = EgammaSCCorrectionMaker
   string recHitProducer = "ecalrechit"
   string recHitCollection = "EcalRecHitsEB"
   string rawSuperClusterProducer = "hybridSuperClusterProducer"
-  string rawSuperClusterCollection = "HybridSuperClusterCollection"
+  string rawSuperClusterCollection = ""
   string superClusterAlgo = "Hybrid"
   double sigmaElectronicNoise = 0.03
 
   bool applyEnergyCorrection = true
-  string corectedSuperClusterCollection = "correctedHybridSuperClusterCollection"
+  string corectedSuperClusterCollection = ""
 }
