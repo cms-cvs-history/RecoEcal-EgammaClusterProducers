@@ -1,7 +1,7 @@
 #
 #  simple analyzer to make histos within a framework job off the super clusters in the event
 #  Author: Shahram Rahatlou, University of Rome & INFN
-#  $Id: egammaSimpleAnalyzer.cfi,v 1.2 2006/06/06 20:26:09 tsirig Exp $
+#  $Id: egammaSimpleAnalyzer.cfi,v 1.3 2006/06/16 11:26:31 rahatlou Exp $
 #
 module egammaSimpleAnalyzer = EgammaSimpleAnalyzer {
 
@@ -11,15 +11,33 @@ module egammaSimpleAnalyzer = EgammaSimpleAnalyzer {
   double xMinHist = 0.
   double xMaxHist = 60.
 
-  string islandBasicClusterProducer   = "islandBasicClusterProducer"
-  string islandBasicClusterCollection = "islandBarrelBasicClusterCollection"
+  #
+  # island clustering in barrel
+  #
+  string islandBarrelBasicClusterProducer   = "islandBasicClusterProducer"
+  string islandBarrelBasicClusterCollection = "islandBarrelBasicClusterCollection"
 
-  string islandSuperClusterProducer   = "islandSuperClusterProducer"
-  string islandSuperClusterCollection = "islandBarrelSuperClusterCollection"
+  string islandBarrelSuperClusterProducer   = "islandSuperClusterProducer"
+  string islandBarrelSuperClusterCollection = "islandBarrelSuperClusterCollection"
 
-  string correctedIslandSuperClusterProducer   = "correctedIslandBarrelSuperClusterProducer"
-  string correctedIslandSuperClusterCollection = ""
+  string correctedIslandBarrelSuperClusterProducer   = "correctedIslandBarrelSuperClusterProducer"
+  string correctedIslandBarrelSuperClusterCollection = ""
 
+  #
+  # island clustering in endcap
+  #
+  string islandEndcapBasicClusterProducer   = "islandBasicClusterProducer"
+  string islandEndcapBasicClusterCollection = "islandEndcapBasicClusterCollection"
+
+  string islandEndcapSuperClusterProducer   = "islandSuperClusterProducer"
+  string islandEndcapSuperClusterCollection = "islandEndcapSuperClusterCollection"
+
+  string correctedIslandEndcapSuperClusterProducer   = "correctedIslandEndcapSuperClusterProducer"
+  string correctedIslandEndcapSuperClusterCollection = ""
+
+  #
+  # hybrid clustering in barrel
+  #
   string hybridSuperClusterProducer   = "hybridSuperClusterProducer"
   string hybridSuperClusterCollection = ""
 
