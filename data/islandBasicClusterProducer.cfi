@@ -1,6 +1,8 @@
 # Island BasicCluster producer
 module islandBasicClusterProducer = IslandClusterProducer
 {
+    string VerbosityLevel = "ERROR"
+
     string barrelHitProducer   = "ecalRecHit"
     string endcapHitProducer   = "ecalRecHit"
 
