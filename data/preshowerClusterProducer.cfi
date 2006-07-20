@@ -4,7 +4,7 @@ module preshowerClusterProducer = PreshowerClusterProducer
 
    # building preshower clusters
 
-    string preshRecHitProducer      = "esrechit"
+    string preshRecHitProducer      = "esRecHit"
     string preshRecHitCollection    = "EcalRecHitsES"
 
     string endcapSClusterProducer   = "islandSuperClusterProducer" 
@@ -24,10 +24,9 @@ module preshowerClusterProducer = PreshowerClusterProducer
     string assocSClusterCollection = "islandEndcapSuperClusterCollectionAssoc"
 
     double preshCalibPlaneX  = 1.0
-    double preshCalibPlaneY  = 0.7
+    double preshCalibPlaneY  = 0.70
     double preshCalibMIPtoGeV = 1.0
 
-    string debugLevel             = "HISTO"
-
-    string outputFile = "presh_cert.root"
+    string debugLevel         = "INFOoo"
+    
 }

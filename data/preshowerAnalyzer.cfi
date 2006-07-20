@@ -1,0 +1,36 @@
+#
+#  simple analyzer to make histos within a framework job off the super clusters in the event
+#  Author: Shahram Rahatlou, University of Rome & INFN
+#  $Id: egammaSimpleAnalyzer.cfi,v 1.4 2006/06/18 18:21:11 rahatlou Exp $
+#
+module preshowerAnalyzer = PreshowerAnalyzer {
+
+  string outputFile = "preshowerAnalyzer.root"
+
+  string preshClusterCollectionX = "preshowerClusterCollectionX"
+  string preshClusterCollectionY = "preshowerClusterCollectionY"
+  string preshClusterProducer    = "preshowerClusterProducer"
+
+  double preshCalibPlaneX  = 1.0
+  double preshCalibPlaneY  = 0.7
+  double preshCalibMIPtoGeV = 1.0
+
+ # building endcap association
+  string islandEndcapSuperClusterProducer1   = "islandSuperClusterProducer"
+  string islandEndcapSuperClusterCollection1 = "islandEndcapSuperClusterCollection"
+
+  string islandEndcapSuperClusterProducer2   = "preshowerClusterProducer"
+  string islandEndcapSuperClusterCollection2 = "islandEndcapSuperClusterCollectionAssoc"
+
+  int32 nBinDE =  40.
+  double EminDE = 0.
+  double EmaxDE = 1.0
+
+  int32 nBinSC = 40.
+  double EminSC = 0.
+  double EmaxSC = 80.
+
+}
+
+
+#Events.Draw("recoSuperClusters_preshowerClusterProducer_islandEndcapSuperClusterCollectionAssoc_PreshowerClusterProcess.obj.energy_")
