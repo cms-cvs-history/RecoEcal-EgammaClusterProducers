@@ -2,6 +2,6 @@
 # geometry needed for clustering
 #--------------------------------
 # for the geometry:
-include "Geometry/CaloEventSetup/test/data/testCaloConfiguration.cfi"
+include "Geometry/EcalCommonData/data/EcalOnly.cfi"
 include "MagneticField/Engine/data/volumeBasedMagneticField.cfi"
 include "Geometry/CaloEventSetup/data/CaloGeometry.cfi"
