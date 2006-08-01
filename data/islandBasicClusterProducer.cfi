@@ -9,8 +9,8 @@ module islandBasicClusters = IslandClusterProducer
     string barrelHitCollection = "EcalRecHitsEB"
     string endcapHitCollection = "EcalRecHitsEE"
 
-    string barrelClusterCollection = "islandBarrelBasicClusters"
-    string endcapClusterCollection = "islandEndcapBasicClusters"
+    string barrelClusterCollection = "islandBarrelBasicClusterCollection"
+    string endcapClusterCollection = "islandEndcapBasicClusterCollection"
 
     double IslandBarrelSeedThr = 0.50
     double IslandEndcapSeedThr = 0.18
