@@ -1,19 +1,19 @@
 #
-# $Id: islandSuperClusterProducer.cfi,v 1.4 2006/06/16 11:26:31 rahatlou Exp $
+# $Id: islandSuperClusterProducer.cfi,v 1.5 2006/06/16 23:13:09 tsirig Exp $
 #
 # Island SuperCluster producer
-module islandSuperClusterProducer = SuperClusterProducer
+module islandSuperClusters = SuperClusterProducer
 {
     string VerbosityLevel = "ERROR"
 
-    string endcapClusterProducer        = "islandBasicClusterProducer"
-    string barrelClusterProducer        = "islandBasicClusterProducer"
+    string endcapClusterProducer        = "islandBasicClusters"
+    string barrelClusterProducer        = "islandBasicClusters"
 
-    string endcapClusterCollection      = "islandEndcapBasicClusterCollection"
-    string barrelClusterCollection      = "islandBarrelBasicClusterCollection"
+    string endcapClusterCollection      = "islandEndcapBasicClusters"
+    string barrelClusterCollection      = "islandBarrelBasicClusters"
 
-    string endcapSuperclusterCollection = "islandEndcapSuperClusterCollection"
-    string barrelSuperclusterCollection = "islandBarrelSuperClusterCollection"
+    string endcapSuperclusterCollection = "islandEndcapSuperClusters"
+    string barrelSuperclusterCollection = "islandBarrelSuperClusters"
 
     double barrelEtaSearchRoad = 0.06
     double barrelPhiSearchRoad = 0.80

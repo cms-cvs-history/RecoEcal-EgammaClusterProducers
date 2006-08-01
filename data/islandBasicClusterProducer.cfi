@@ -1,5 +1,5 @@
 # Island BasicCluster producer
-module islandBasicClusterProducer = IslandClusterProducer
+module islandBasicClusters = IslandClusterProducer
 {
     string VerbosityLevel = "ERROR"
 
@@ -9,8 +9,8 @@ module islandBasicClusterProducer = IslandClusterProducer
     string barrelHitCollection = "EcalRecHitsEB"
     string endcapHitCollection = "EcalRecHitsEE"
 
-    string barrelClusterCollection = "islandBarrelBasicClusterCollection"
-    string endcapClusterCollection = "islandEndcapBasicClusterCollection"
+    string barrelClusterCollection = "islandBarrelBasicClusters"
+    string endcapClusterCollection = "islandEndcapBasicClusters"
 
     double IslandBarrelSeedThr = 0.50
     double IslandEndcapSeedThr = 0.18
