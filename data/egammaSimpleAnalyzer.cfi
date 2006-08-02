@@ -1,7 +1,7 @@
 #
 #  simple analyzer to make histos within a framework job off the super clusters in the event
 #  Author: Shahram Rahatlou, University of Rome & INFN
-#  $Id: egammaSimpleAnalyzer.cfi,v 1.5 2006/08/01 14:08:59 kati Exp $
+#  $Id: egammaSimpleAnalyzer.cfi,v 1.6 2006/08/01 14:42:38 kati Exp $
 #
 module egammaSimpleAnalyzer = EgammaSimpleAnalyzer {
 
@@ -14,34 +14,34 @@ module egammaSimpleAnalyzer = EgammaSimpleAnalyzer {
   #
   # island clustering in barrel
   #
-  string islandBarrelBasicClusterProducer   = "islandBasicClusterProducer"
-  string islandBarrelBasicClusterCollection = "islandBarrelBasicClusterCollection"
+  string islandBarrelBasicClusterProducer   = "islandBasicClusters"
+  string islandBarrelBasicClusterCollection = "islandBarrelBasicClusters"
 
-  string islandBarrelSuperClusterProducer   = "islandSuperClusterProducer"
-  string islandBarrelSuperClusterCollection = "islandBarrelSuperClusterCollection"
+  string islandBarrelSuperClusterProducer   = "islandSuperClusters"
+  string islandBarrelSuperClusterCollection = "islandBarrelSuperClusters"
 
-  string correctedIslandBarrelSuperClusterProducer   = "correctedIslandBarrelSuperClusterProducer"
+  string correctedIslandBarrelSuperClusterProducer   = "correctedIslandBarrelSuperClusters"
   string correctedIslandBarrelSuperClusterCollection = ""
 
   #
   # island clustering in endcap
   #
-  string islandEndcapBasicClusterProducer   = "islandBasicClusterProducer"
-  string islandEndcapBasicClusterCollection = "islandEndcapBasicClusterCollection"
+  string islandEndcapBasicClusterProducer   = "islandBasicClusters"
+  string islandEndcapBasicClusterCollection = "islandEndcapBasicClusters"
 
-  string islandEndcapSuperClusterProducer   = "islandSuperClusterProducer"
-  string islandEndcapSuperClusterCollection = "islandEndcapSuperClustersCollection"
+  string islandEndcapSuperClusterProducer   = "islandSuperClusters"
+  string islandEndcapSuperClusterCollection = "islandEndcapSuperClusters"
 
-  string correctedIslandEndcapSuperClusterProducer   = "correctedIslandEndcapSuperClusterProducer"
+  string correctedIslandEndcapSuperClusterProducer   = "correctedIslandEndcapSuperClusters"
   string correctedIslandEndcapSuperClusterCollection = ""
 
   #
   # hybrid clustering in barrel
   #
-  string hybridSuperClusterProducer   = "hybridSuperClusterProducer"
+  string hybridSuperClusterProducer   = "hybridSuperClusters"
   string hybridSuperClusterCollection = ""
 
-  string correctedHybridSuperClusterProducer   = "correctedHybridSuperClusterProducer"
+  string correctedHybridSuperClusterProducer   = "correctedHybridSuperClusters"
   string correctedHybridSuperClusterCollection = ""
 
 }

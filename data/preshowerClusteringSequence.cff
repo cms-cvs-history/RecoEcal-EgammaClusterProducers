@@ -1,18 +1,18 @@
 #
-# $Id: preshowerClusteringSequence.cff,v 1.3 2006/06/16 11:26:31 bandurin Exp $
+# $Id: preshowerClusteringSequence.cff,v 1.1 2006/06/29 21:21:58 dbanduri Exp $
 #
 #------------------
 #Preshower clustering:
 #------------------
 
 # Preshower Cluster producer
-include "RecoEcal/EgammaClusterProducers/data/preshowerClusterProducer.cfi"
+include "RecoEcal/EgammaClusterProducers/data/preshowerClusters.cfi"
 
 # Endcap Cluster Association producer
-#include "RecoEcal/EgammaClusterProducers/data/endcapAssocSuperClusterProducer.cfi"
+#include "RecoEcal/EgammaClusterProducers/data/endcapAssocSuperClusters.cfi"
 
 
 # create sequence for preshower clustering
-sequence preshowerClusteringSequence = { preshowerClusterProducer}
+sequence preshowerClusteringSequence = { preshowerClusters}
 #             endcapAssocSuperClusterProducer}
              
