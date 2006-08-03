@@ -1,0 +1,28 @@
+#
+# $Id: $
+# complete sequence of clustering in ecal barrel & endcap + preshower
+# Shahram Rahatlou, University of Rome & INFN, 3 Aug 2006
+#
+# geometry needed for clustering
+include "RecoEcal/EgammaClusterProducers/data/geometryForClustering.cff"
+
+#------------------
+#Island clustering:
+#------------------
+# create sequence for island clustering
+include "RecoEcal/EgammaClusterProducers/data/islandClusteringSequence.cff"
+
+#------------------
+#Hybrid clustering:
+#------------------
+# hybrid clustering sequence
+include "RecoEcal/EgammaClusterProducers/data/hybridClusteringSequence.cff"
+
+# clusters in preshower
+include "RecoEcal/EgammaClusterProducers/data/preshowerClusteringSequence.cff"
+
+# create path with all clustering algos
+# NB: preshower MUST be run after island clustering in the endcap
+sequence ecalClusteringSequence = { islandClusteringSequence & hybridClusteringSequence,
+                                    preshowerClusteringSequence
+                                  }
