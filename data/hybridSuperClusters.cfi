@@ -2,7 +2,7 @@
   module hybridSuperClusters = HybridClusterProducer
   {
     # input collection
-    string ecalhitproducer = "ecalrechit"
+    string ecalhitproducer = "ecalRecHit"
     string ecalhitcollection = "EcalRecHitsEB"
 
     # clustering parameters
