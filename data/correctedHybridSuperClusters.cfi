@@ -1,6 +1,8 @@
 # Energy scale correction for Hybrid SuperClusters
 module correctedHybridSuperClusters = EgammaSCCorrectionMaker
 {
+  string VerbosityLevel = "ERROR"
+
   string recHitProducer = "ecalRecHit"
   string recHitCollection = "EcalRecHitsEB"
   string rawSuperClusterProducer = "hybridSuperClusters"

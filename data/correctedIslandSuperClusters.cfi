@@ -1,9 +1,11 @@
 #
-# $Id: correctedIslandSuperClusterProducer.cfi,v 1.5 2006/07/17 10:52:33 rahatlou Exp $
+# $Id: correctedIslandSuperClusters.cfi,v 1.1 2006/08/02 13:41:15 rahatlou Exp $
 #
 # Energy scale correction for Island SuperClusters
 module correctedIslandBarrelSuperClusters = EgammaSCCorrectionMaker
 {
+  string VerbosityLevel = "ERROR"
+
   string recHitProducer = "ecalRecHit"
   string recHitCollection = "EcalRecHitsEB"
   string rawSuperClusterProducer   = "islandSuperClusters"
@@ -16,6 +18,8 @@ module correctedIslandBarrelSuperClusters = EgammaSCCorrectionMaker
 
 module correctedIslandEndcapSuperClusters = EgammaSCCorrectionMaker
 {
+  string VerbosityLevel = "ERROR"
+
   string recHitProducer = "ecalRecHit"
   string recHitCollection = "EcalRecHitsEE"
   string rawSuperClusterProducer = "islandSuperClusters"
