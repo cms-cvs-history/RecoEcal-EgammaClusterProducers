@@ -1,0 +1,13 @@
+#
+# $Id: preshowerPi0NNSequence.cff,v 1.1 2006/07/26 21:21:58 akyriaki Exp $
+#
+#------------------
+#Preshower Pi0 NN clustering:
+#------------------
+
+# Preshower Cluster producer
+include "RecoEcal/EgammaClusterProducers/data/preshowerPi0NNProducer.cfi"
+
+# create sequence for preshower Pi0 NN
+sequence preshowerPi0NNSequence = { preshowerPi0NNProducer}
+             
