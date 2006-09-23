@@ -1,0 +1,31 @@
+# $Id: $
+# Preshower cluster producer
+module piZeroDiscriminators = PiZeroDiscriminatorProducer
+{
+
+   # building preshower clusters
+
+    string endcapHitProducer   = "ecalRecHit"
+    string endcapHitCollection = "EcalRecHitsEE"
+
+    string preshRecHitProducer      = "ecalPreshowerRecHit"
+    string preshRecHitCollection    = "EcalRecHitsES"
+
+    string endcapSClusterProducer   = "islandSuperClusters"
+    string endcapSClusterCollection = "islandEndcapSuperClusters"
+ 
+    double preshStripEnergyCut  = 0.0
+    int32  preshPi0Nstrip  = 5
+    bool coretools_logweight = true
+    double coretools_x0 = 0.89
+    double coretools_t0 = 6.2
+    double coretools_w0 = 4.0
+
+   # building endcap association
+
+    string endcapPiZeroDiscriminatorCollection = "endcapPiZeroDiscriminatorCollection"
+    string barrelPiZeroDiscriminatorCollection = "barrelPiZeroDiscriminatorCollection"
+
+    # DEBUG: very verbose  INFO: minimal printout
+    string debugLevel         = "INFO"
+}
