@@ -1,5 +1,5 @@
 #
-# $Id: islandSuperClusterProducer.cfi,v 1.7 2006/08/01 14:42:38 kati Exp $
+# $Id: islandSuperClusters.cfi,v 1.1 2006/08/02 13:41:15 rahatlou Exp $
 #
 # Island SuperCluster producer
 module islandSuperClusters = SuperClusterProducer
@@ -19,5 +19,5 @@ module islandSuperClusters = SuperClusterProducer
     double barrelPhiSearchRoad = 0.80
     double endcapEtaSearchRoad = 0.14
     double endcapPhiSearchRoad = 0.40
-    double seedEnergyThreshold = 3.00
+    double seedTransverseEnergyThreshold = 3.00
 }
