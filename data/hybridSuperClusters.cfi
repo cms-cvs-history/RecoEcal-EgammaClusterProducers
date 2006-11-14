@@ -21,6 +21,7 @@
     string clustershapecollection = ""
     string basicclusterCollection = ""
     string superclusterCollection = ""
+    string shapeAssociation = "hybridShapeAssoc"
     string debugLevel         = "INFO"
 
   }
