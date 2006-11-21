@@ -12,10 +12,10 @@
     double ewing = 1.0
     double eseed = .35
 
-    bool coretools_logweight = true
-    double coretools_x0 =0.89
-    double coretools_t0 = 6.2
-    double coretools_w0=4.0
+    bool posCalc_logweight = true
+    double posCalc_t0 = 5.7
+    double posCalc_w0 = 4.2
+    double posCalc_x0 = 0.89
 
     # output collections
     string clustershapecollection = ""
