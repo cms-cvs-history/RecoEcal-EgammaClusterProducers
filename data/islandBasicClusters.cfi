@@ -15,10 +15,12 @@ module islandBasicClusters = IslandClusterProducer
     double IslandBarrelSeedThr = 0.50
     double IslandEndcapSeedThr = 0.18
 
-    bool coretools_logweight = true
-    double coretools_x0 = 0.89
-    double coretools_t0 = 6.2
-    double coretools_w0 = 4.0
+    bool posCalc_logweight = true
+    double posCalc_t0_barl = 5.7
+    double posCalc_t0_endc = 4.0
+    double posCalc_t0_endcPresh = 0.4
+    double posCalc_w0 = 4.2
+    double posCalc_x0 = 0.89
     string clustershapecollectionEB = "islandBarrelShape"
     string clustershapecollectionEE = "islandEndcapShape"
     string barrelShapeAssociation = "islandBarrelShapeAssoc"
