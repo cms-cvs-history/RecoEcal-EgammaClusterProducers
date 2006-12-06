@@ -1,7 +1,7 @@
 #
 #  simple analyzer to make histos within a framework job off the super clusters in the event
 #  Author: Shahram Rahatlou, University of Rome & INFN
-#  $Id: preshowerAnalyzer.cfi,v 1.1 2006/07/20 18:33:47 dbanduri Exp $
+#  $Id: preshowerAnalyzer.cfi,v 1.2 2006/08/02 13:41:52 rahatlou Exp $
 #
 module preshowerAnalyzer = PreshowerAnalyzer {
 
@@ -12,8 +12,9 @@ module preshowerAnalyzer = PreshowerAnalyzer {
   string preshClusterCollectionY = "preshowerYClusters"
 
   double preshCalibPlaneX  = 1.0
-  double preshCalibPlaneY  = 0.7
-  double preshCalibMIPtoGeV = 1.0
+  double preshCalibPlaneY  = 0.70
+  double preshCalibGamma   = 0.024   # 0.020
+  double preshCalibMIP     = 90.0e-6 # 78.5e-6 
 
  # building endcap association
   string islandEndcapSuperClusterProducer1   = "islandSuperClusters"
@@ -22,15 +23,13 @@ module preshowerAnalyzer = PreshowerAnalyzer {
   string islandEndcapSuperClusterProducer2   = "preshowerClusters"
   string islandEndcapSuperClusterCollection2 = "islandEndcapSuperClustersAssoc"
 
-  int32 nBinDE =  40.
+  int32 nBinDE =  25.
   double EminDE = 0.
-  double EmaxDE = 1.0
+  double EmaxDE = 50.0
 
-  int32 nBinSC = 40.
+  int32 nBinSC =  60.
   double EminSC = 0.
-  double EmaxSC = 80.
+  double EmaxSC = 300.
 
 }
 
-
-#Events.Draw("recoSuperClusters_preshowerClusterProducer_islandEndcapSuperClusterCollectionAssoc_PreshowerClusterProcess.obj.energy_")
