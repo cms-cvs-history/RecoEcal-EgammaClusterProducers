@@ -2,14 +2,17 @@
 module preshowerClusters = PreshowerClusterProducer
 {
 
-   # building preshower clusters
+  # building preshower clusters
 
     string preshRecHitProducer      = "ecalPreshowerRecHit"
     string preshRecHitCollection    = "EcalRecHitsES"
 
     string endcapSClusterProducer   = "islandSuperClusters"
     string endcapSClusterCollection = "islandEndcapSuperClusters"
- 
+
+    #string endcapSClusterProducer   = "correctedIslandEndcapSuperClusters"
+    #string endcapSClusterCollection = ""
+
     string preshClusterCollectionX = "preshowerXClusters"
     string preshClusterCollectionY = "preshowerYClusters"
 
@@ -25,8 +28,9 @@ module preshowerClusters = PreshowerClusterProducer
 
     double preshCalibPlaneX  = 1.0
     double preshCalibPlaneY  = 0.70
-    double preshCalibMIPtoGeV = 1.0
+    double preshCalibGamma   = 0.024   # 0.020
+    double preshCalibMIP     = 90.0e-6 # 78.5e-6 
 
-    string debugLevel         = "INFOoo"
-    
+    string debugLevel         = "INFO" # switch to 'INFO' to get an extensive print-out
+
 }
