@@ -7,11 +7,11 @@ module preshowerClusters = PreshowerClusterProducer
     string preshRecHitProducer      = "ecalPreshowerRecHit"
     string preshRecHitCollection    = "EcalRecHitsES"
 
-    string endcapSClusterProducer   = "islandSuperClusters"
-    string endcapSClusterCollection = "islandEndcapSuperClusters"
+    #string endcapSClusterProducer   = "islandSuperClusters"
+    #string endcapSClusterCollection = "islandEndcapSuperClusters"
 
-    #string endcapSClusterProducer   = "correctedIslandEndcapSuperClusters"
-    #string endcapSClusterCollection = ""
+    string endcapSClusterProducer   = "correctedIslandEndcapSuperClusters"
+    string endcapSClusterCollection = ""
 
     string preshClusterCollectionX = "preshowerXClusters"
     string preshClusterCollectionY = "preshowerYClusters"
@@ -24,7 +24,7 @@ module preshowerClusters = PreshowerClusterProducer
 
    # building endcap association
 
-    string assocSClusterCollection = "islandEndcapSuperClustersAssoc"
+    string assocSClusterCollection = "correctedEndcapSuperClustersWithPreshower"
 
     double preshCalibPlaneX  = 1.0
     double preshCalibPlaneY  = 0.70
