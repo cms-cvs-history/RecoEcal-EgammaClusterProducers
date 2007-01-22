@@ -31,6 +31,6 @@ module correctedEndcapSuperClustersWithPreshower = PreshowerClusterProducer
     double preshCalibGamma   = 0.024   # 0.020
     double preshCalibMIP     = 90.0e-6 # 78.5e-6 
 
-    string debugLevel         = "INFO" # switch to 'INFO' to get an extensive print-out
+    string debugLevel         = "" # switch to 'INFO' to get an extensive print-out
 
 }
