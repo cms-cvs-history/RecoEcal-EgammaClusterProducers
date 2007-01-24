@@ -13,7 +13,7 @@
     double eseed = .35
 
     bool posCalc_logweight = true
-    double posCalc_t0 = 5.7
+    double posCalc_t0 = 7.4
     double posCalc_w0 = 4.2
     double posCalc_x0 = 0.89
 
