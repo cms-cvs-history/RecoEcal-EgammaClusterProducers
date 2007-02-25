@@ -1,5 +1,5 @@
 #
-# $Id: correctedIslandSuperClusters.cfi,v 1.1 2006/08/02 13:41:15 rahatlou Exp $
+# $Id: correctedIslandSuperClusters.cfi,v 1.2 2006/08/09 13:03:12 dlevans Exp $
 #
 # Energy scale correction for Island SuperClusters
 module correctedIslandBarrelSuperClusters = EgammaSCCorrectionMaker
@@ -25,7 +25,7 @@ module correctedIslandEndcapSuperClusters = EgammaSCCorrectionMaker
   string rawSuperClusterProducer = "islandSuperClusters"
   string rawSuperClusterCollection = "islandEndcapSuperClusters"
   string superClusterAlgo = "Island"
-  double sigmaElectronicNoise = 0.03
+  double sigmaElectronicNoise = 0.15
   bool applyEnergyCorrection = true
   string corectedSuperClusterCollection = ""
 }
