@@ -1,0 +1,15 @@
+# Energy scale correction for Island Endcap SuperClusters
+
+module correctedIslandEndcapSuperClusters = EgammaSCCorrectionMaker
+{
+  string VerbosityLevel = "ERROR"
+
+  string recHitProducer = "ecalRecHit"
+  string recHitCollection = "EcalRecHitsEE"
+  string rawSuperClusterProducer = "islandSuperClusters"
+  string rawSuperClusterCollection = "islandEndcapSuperClusters"
+  string superClusterAlgo = "Island"
+  double sigmaElectronicNoise = 0.15
+  bool applyEnergyCorrection = true
+  string corectedSuperClusterCollection = ""
+}

@@ -1,5 +1,5 @@
 #
-# $Id: islandClusteringSequence.cff,v 1.5 2006/08/01 14:42:38 kati Exp $
+# $Id: islandClusteringSequence.cff,v 1.6 2006/08/02 13:41:52 rahatlou Exp $
 #
 #------------------
 #Island clustering:
@@ -12,7 +12,8 @@ include "RecoEcal/EgammaClusterProducers/data/islandBasicClusters.cfi"
 include "RecoEcal/EgammaClusterProducers/data/islandSuperClusters.cfi"
 
 # Energy scale correction for Island SuperClusters
-include "RecoEcal/EgammaClusterProducers/data/correctedIslandSuperClusters.cfi"
+include "RecoEcal/EgammaClusterProducers/data/correctedIslandBarrelSuperClusters.cfi"
+include "RecoEcal/EgammaClusterProducers/data/correctedIslandEndcapSuperClusters.cfi"
 
 # create sequence for island clustering
 sequence islandClusteringSequence = {
