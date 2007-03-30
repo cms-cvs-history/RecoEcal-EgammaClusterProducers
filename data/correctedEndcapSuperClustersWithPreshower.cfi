@@ -2,6 +2,8 @@
 module correctedEndcapSuperClustersWithPreshower = PreshowerClusterProducer
 {
 
+  double etThresh =0.
+
   # building preshower clusters
 
     string preshRecHitProducer      = "ecalPreshowerRecHit"

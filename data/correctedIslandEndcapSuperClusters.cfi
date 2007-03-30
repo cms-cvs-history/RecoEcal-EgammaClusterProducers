@@ -12,4 +12,5 @@ module correctedIslandEndcapSuperClusters = EgammaSCCorrectionMaker
   double sigmaElectronicNoise = 0.15
   bool applyEnergyCorrection = true
   string corectedSuperClusterCollection = ""
+  double etThresh = 0.
 }

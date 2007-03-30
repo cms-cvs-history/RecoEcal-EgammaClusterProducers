@@ -9,6 +9,7 @@ module correctedHybridSuperClusters = EgammaSCCorrectionMaker
   string rawSuperClusterCollection = ""
   string superClusterAlgo = "Hybrid"
   double sigmaElectronicNoise = 0.03
+  double etThresh =0.
 
   bool applyEnergyCorrection = true
   string corectedSuperClusterCollection = ""
