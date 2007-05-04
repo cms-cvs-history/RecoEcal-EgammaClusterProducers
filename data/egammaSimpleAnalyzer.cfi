@@ -1,13 +1,13 @@
 #
 #  simple analyzer to make histos within a framework job off the super clusters in the event
 #  Author: Shahram Rahatlou, University of Rome & INFN
-#  $Id: egammaSimpleAnalyzer.cfi,v 1.7 2006/08/02 13:41:52 rahatlou Exp $
+#  $Id: egammaSimpleAnalyzer.cfi,v 1.11 2007/03/25 23:00:29 futyand Exp $
 #
 module egammaSimpleAnalyzer = EgammaSimpleAnalyzer {
 
   string outputFile = "egammaAnalyzer.root"
 
-  int32 nbinHist = 200.
+  int32 nbinHist = 200
   double xMinHist = 0.
   double xMaxHist = 60.
 
@@ -17,12 +17,6 @@ module egammaSimpleAnalyzer = EgammaSimpleAnalyzer {
   string islandBarrelBasicClusterProducer   = "islandBasicClusters"
   string islandBarrelBasicClusterCollection = "islandBarrelBasicClusters"
   string islandBarrelBasicClusterShapes     = "islandBarrelShape"
-
-  string islandBarrelSuperClusterProducer   = "islandSuperClusters"
-  string islandBarrelSuperClusterCollection = "islandBarrelSuperClusters"
-
-  string correctedIslandBarrelSuperClusterProducer   = "correctedIslandBarrelSuperClusters"
-  string correctedIslandBarrelSuperClusterCollection = ""
 
   #
   # island clustering in endcap
@@ -34,7 +28,7 @@ module egammaSimpleAnalyzer = EgammaSimpleAnalyzer {
   string islandEndcapSuperClusterProducer   = "islandSuperClusters"
   string islandEndcapSuperClusterCollection = "islandEndcapSuperClusters"
 
-  string correctedIslandEndcapSuperClusterProducer   = "correctedIslandEndcapSuperClusters"
+  string correctedIslandEndcapSuperClusterProducer   = "correctedEndcapSuperClustersWithPreshower"
   string correctedIslandEndcapSuperClusterCollection = ""
 
   #
