@@ -57,9 +57,15 @@ HybridClusterProducer::HybridClusterProducer(const edm::ParameterSet& ps)
   providedParameters.insert(std::make_pair("T0_barl",ps.getParameter<double>("posCalc_t0")));
   providedParameters.insert(std::make_pair("W0",ps.getParameter<double>("posCalc_w0")));
   providedParameters.insert(std::make_pair("X0",ps.getParameter<double>("posCalc_x0")));
-
   posCalculator_ = PositionCalc(providedParameters);
-  shapeAlgo_ = ClusterShapeAlgo(posCalculator_);
+  
+  std::map<std::string,double> providedZernikeParameters;  
+  providedParameters.insert(std::make_pair("Radius",ps.getParameter<int>("pesudoZernikeMoments_radius")));
+  providedParameters.insert(std::make_pair("W0",ps.getParameter<double>("posCalc_w0")));
+  providedParameters.insert(std::make_pair("LogWeighted",ps.getParameter<bool>("pesudoZernikeMoments_logWeight")));
+  providedParameters.insert(std::make_pair("InvariantMap",ps.getParameter<bool>("pesudoZernikeMoments_useRotationInvariantMap")));
+  providedParameters.insert(std::make_pair("EnergyScalingType",ps.getParameter<int>("pesudoZernikeMoments_energyScalingType")));  
+  shapeAlgo_ = ClusterShapeAlgo(posCalculator_,providedZernikeParameters);
 
   hybrid_p = new HybridClusterAlgo(ps.getParameter<double>("HybridBarrelSeedThr"), 
                                    ps.getParameter<int>("step"),

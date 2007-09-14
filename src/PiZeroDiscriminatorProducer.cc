@@ -67,7 +67,14 @@ PiZeroDiscriminatorProducer::PiZeroDiscriminatorProducer(const edm::ParameterSet
   providedParameters.insert(std::make_pair("T0",ps.getParameter<double>("coretools_t0")));
   providedParameters.insert(std::make_pair("W0",ps.getParameter<double>("coretools_w0")));
   posCalculator_ = PositionCalc(providedParameters);
-  shapeAlgo_ = ClusterShapeAlgo(posCalculator_);
+  
+  std::map<std::string,double> providedZernikeParameters;  
+  providedParameters.insert(std::make_pair("Radius",ps.getParameter<int>("pesudoZernikeMoments_radius")));
+  providedParameters.insert(std::make_pair("W0",ps.getParameter<double>("coretools_w0")));
+  providedParameters.insert(std::make_pair("LogWeighted",ps.getParameter<bool>("pesudoZernikeMoments_logWeight")));
+  providedParameters.insert(std::make_pair("InvariantMap",ps.getParameter<bool>("pesudoZernikeMoments_useRotationInvariantMap")));
+  providedParameters.insert(std::make_pair("EnergyScalingType",ps.getParameter<int>("pesudoZernikeMoments_energyScalingType")));  
+  shapeAlgo_ = ClusterShapeAlgo(posCalculator_,providedZernikeParameters);
 
   // Name of a SuperClusterCollection to make associations:
   endcapSClusterCollection_ = ps.getParameter<std::string>("endcapSClusterCollection");

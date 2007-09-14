@@ -1,4 +1,4 @@
-# $Id: $
+# $Id: piZeroDiscriminators.cfi,v 1.1 2006/09/23 14:49:12 rahatlou Exp $
 # Preshower cluster producer
 module piZeroDiscriminators = PiZeroDiscriminatorProducer
 {
@@ -20,6 +20,11 @@ module piZeroDiscriminators = PiZeroDiscriminatorProducer
     double coretools_x0 = 0.89
     double coretools_t0 = 6.2
     double coretools_w0 = 4.0
+    
+    int32  pesudoZernikeMoments_radius = 6
+    bool   pesudoZernikeMoments_logWeight = true
+    bool   pesudoZernikeMoments_useRotationInvariantMap = true
+    int32  pesudoZernikeMoments_energyScalingType = 3 
 
    # building endcap association
 

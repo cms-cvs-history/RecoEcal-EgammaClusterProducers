@@ -17,6 +17,11 @@
     double posCalc_w0 = 4.2
     double posCalc_x0 = 0.89
 
+    int32  pesudoZernikeMoments_radius = 6
+    bool   pesudoZernikeMoments_logWeight = true
+    bool   pesudoZernikeMoments_useRotationInvariantMap = true
+    int32  pesudoZernikeMoments_energyScalingType = 3 
+
     # output collections
     string clustershapecollection = ""
     string basicclusterCollection = ""
