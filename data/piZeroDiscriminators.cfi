@@ -1,4 +1,4 @@
-# $Id: piZeroDiscriminators.cfi,v 1.1 2006/09/23 14:49:12 rahatlou Exp $
+# $Id: piZeroDiscriminators.cfi,v 1.2 2007/06/25 09:19:29 akyriaki Exp $
 # Preshower cluster producer
 module piZeroDiscriminators = PiZeroDiscriminatorProducer
 {
@@ -13,13 +13,10 @@ module piZeroDiscriminators = PiZeroDiscriminatorProducer
 
     string preshRecHitProducer      = "ecalPreshowerRecHit"
     string preshRecHitCollection    = "EcalRecHitsES"
-
-    string barrelSClusterProducer   = "islandSuperClusters"
-    string barrelSClusterCollection = "islandBarrelSuperClusters"
-
-    string endcapSClusterProducer   = "islandSuperClusters"
-    string endcapSClusterCollection = "islandEndcapSuperClusters"
- 
+  
+    string corrPhoProducer = "correctedPhotons"
+    string correctedPhotonCollection   = ""
+    string Pi0Association = "PhotonPi0DiscriminatorAssociationMap"
 
     double preshStripEnergyCut  = 0.0
     int32  preshPi0Nstrip  = 5
@@ -30,11 +27,6 @@ module piZeroDiscriminators = PiZeroDiscriminatorProducer
     double posCalc_t0_endcPresh = 1.2
     double posCalc_w0 = 4.2
     double posCalc_x0 = 0.89
-
-   # building endcap association
-
-    string endcapPiZeroDiscriminatorCollection = "endcapPiZeroDiscriminatorCollection"
-    string barrelPiZeroDiscriminatorCollection = "barrelPiZeroDiscriminatorCollection"
 
     # DEBUG: very verbose  INFO: minimal printout
     string debugLevel         = "INFO"
