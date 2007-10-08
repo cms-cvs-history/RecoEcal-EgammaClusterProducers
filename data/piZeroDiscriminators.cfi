@@ -5,29 +5,23 @@ module piZeroDiscriminators = PiZeroDiscriminatorProducer
 
    # building preshower clusters
 
-    string barrelHitProducer   = "ecalRecHit"
-    string barrelHitCollection = "EcalRecHitsEB"
-
-    string endcapHitProducer   = "ecalRecHit"
-    string endcapHitCollection = "EcalRecHitsEE"
-
     string preshRecHitProducer      = "ecalPreshowerRecHit"
     string preshRecHitCollection    = "EcalRecHitsES"
-  
+
     string corrPhoProducer = "correctedPhotons"
     string correctedPhotonCollection   = ""
     string Pi0Association = "PhotonPi0DiscriminatorAssociationMap"
 
+    string barrelClusterShapeMapProducer  = "hybridSuperClusters"
+    string barrelClusterShapeMapCollection = "hybridShapeAssoc"
+
+    string endcapClusterShapeMapProducer  = "islandBasicClusters"
+    string endcapClusterShapeMapCollection = "islandEndcapShapeAssoc"
+
     double preshStripEnergyCut  = 0.0
     int32  preshPi0Nstrip  = 5
 
-    bool posCalc_logweight = true
-    double posCalc_t0_barl = 7.4
-    double posCalc_t0_endc = 3.1
-    double posCalc_t0_endcPresh = 1.2
-    double posCalc_w0 = 4.2
-    double posCalc_x0 = 0.89
-
     # DEBUG: very verbose  INFO: minimal printout
-    string debugLevel         = "INFO"
+    # string debugLevel         = "INFO"
+    string debugLevel         = "DEBUG"
 }
