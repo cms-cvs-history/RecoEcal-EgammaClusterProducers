@@ -1,13 +1,24 @@
+<<<<<<< piZeroDiscriminators.cfi
 # $Id: piZeroDiscriminators.cfi,v 1.2 2007/06/25 09:19:29 akyriaki Exp $
+=======
+# $Id: piZeroDiscriminators.cfi,v 1.4 2007/10/08 18:50:04 futyand Exp $
+>>>>>>> 1.4
 # Preshower cluster producer
 module piZeroDiscriminators = PiZeroDiscriminatorProducer
 {
 
    # building preshower clusters
+<<<<<<< piZeroDiscriminators.cfi
+    string preshClusterShapeProducer    = "preshowerClusterShape"
+    string preshClusterShapeCollectionX = "preshowerXClustersShape"
+    string preshClusterShapeCollectionY = "preshowerYClustersShape"
+    
+=======
 
     string preshRecHitProducer      = "ecalPreshowerRecHit"
     string preshRecHitCollection    = "EcalRecHitsES"
 
+>>>>>>> 1.4
     string corrPhoProducer = "correctedPhotons"
     string correctedPhotonCollection   = ""
     string Pi0Association = "PhotonPi0DiscriminatorAssociationMap"
