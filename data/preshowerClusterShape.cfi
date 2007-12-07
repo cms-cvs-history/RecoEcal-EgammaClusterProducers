@@ -1,4 +1,4 @@
-# $Id: preshowerClusterShape.cfi,v 1.2 2007/06/25 09:19:29 akyriaki Exp $
+# $Id: preshowerClusterShape.cfi,v 1.1 2007/10/18 13:30:27 akyriaki Exp $
 # Preshower cluster producer
 module preshowerClusterShape = PreshowerClusterShapeProducer
 {
@@ -7,9 +7,12 @@ module preshowerClusterShape = PreshowerClusterShapeProducer
 
     string preshRecHitProducer      = "ecalPreshowerRecHit"
     string preshRecHitCollection    = "EcalRecHitsES"
+ 
+    string endcapSClusterProducer   = "islandSuperClusters"
+    string endcapSClusterCollection = "islandEndcapSuperClusters"
 
-    string corrPhoProducer = "correctedPhotons"
-    string correctedPhotonCollection   = ""
+//    string corrPhoProducer = "correctedPhotons"
+//    string correctedPhotonCollection   = ""
     
     string PreshowerClusterShapeCollectionX = "preshowerXClustersShape"
     string PreshowerClusterShapeCollectionY = "preshowerYClustersShape" 
@@ -18,6 +21,6 @@ module preshowerClusterShape = PreshowerClusterShapeProducer
     int32  preshPi0Nstrip  = 5
 
     # DEBUG: very verbose  INFO: minimal printout
-    # string debugLevel         = "INFO"
-    string debugLevel         = "DEBUG"
+    string debugLevel         = "INFO"
+    # string debugLevel         = "DEBUG"
 }
