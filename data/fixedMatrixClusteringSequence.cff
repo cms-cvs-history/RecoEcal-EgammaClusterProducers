@@ -1,0 +1,17 @@
+
+#------------------
+#FixedMatrix clustering:
+#------------------
+
+# FixedMatrix BasicCluster producer
+include "RecoEcal/EgammaClusterProducers/data/fixedMatrixBasicClusters.cfi"
+
+# FixedMatrix SuperCluster producer
+include "RecoEcal/EgammaClusterProducers/data/fixedMatrixSuperClusters.cfi"
+
+# create sequence for fixedMatrix clustering
+sequence fixedMatrixClusteringSequence = {
+             fixedMatrixBasicClusters,
+             fixedMatrixSuperClusters
+}
+
