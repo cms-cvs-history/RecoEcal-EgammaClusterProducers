@@ -8,6 +8,7 @@
     # clustering parameters
     double HybridBarrelSeedThr = 1.0
     int32 step = 17
+    bool dynamicPhiRoad = false
     double ethresh = .1
     double ewing = 1.0
     double eseed = .35
