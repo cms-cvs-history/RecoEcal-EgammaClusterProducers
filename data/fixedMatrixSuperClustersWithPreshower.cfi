@@ -11,7 +11,7 @@ module fixedMatrixSuperClustersWithPreshower = PreshowerClusterProducer
     string preshRecHitCollection    = "EcalRecHitsES"
 
     string endcapSClusterProducer   = "fixedMatrixSuperClusters"
-    string endcapSClusterCollection = ""
+    string endcapSClusterCollection = "fixedMatrixEndcapSuperClusters"
 
     string preshClusterCollectionX = "preshowerXClusters"
     string preshClusterCollectionY = "preshowerYClusters"

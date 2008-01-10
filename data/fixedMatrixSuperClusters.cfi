@@ -1,5 +1,5 @@
 #
-# $Id: fixedMatrixSuperClusters.cfi,v 1.5 2007/03/30 13:30:58 futyand Exp $
+# $Id: fixedMatrixSuperClusters.cfi,v 1.1 2007/12/12 20:08:18 dlevans Exp $
 #
 # Fixed Matrix SuperCluster producer
 module fixedMatrixSuperClusters = FixedMatrixSuperClusterProducer
@@ -20,6 +20,7 @@ module fixedMatrixSuperClusters = FixedMatrixSuperClusterProducer
     double endcapEtaSearchRoad = 0.14
     double endcapPhiSearchRoad = 0.60
     double seedTransverseEnergyThreshold = 1.00
+    bool dynamicPhiRoad = true
 
     bool doBarrel = false
     bool doEndcaps = true
