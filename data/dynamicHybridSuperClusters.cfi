@@ -1,5 +1,5 @@
 # Producer for Hybrid BasicClusters and SuperClusters
-  module hybridSuperClusters = HybridClusterProducer
+  module dynamicHybridSuperClusters = HybridClusterProducer
   {
     # input collection
     string ecalhitproducer = "ecalRecHit"
@@ -8,9 +8,13 @@
     # clustering parameters
     double HybridBarrelSeedThr = 1.0
     int32 step = 17
-    bool dynamicPhiRoad = false
+    bool dynamicPhiRoad = true	// do dynamic phi road
     double ethresh = .1
-    double ewing = 1.0
+
+    //double ewing = 1.0	// if central crystal of domino
+    double ewing = 0.0		// is > ewing then use 1x5
+				// e.g. always use 1x5
+
     double eseed = .35
 
     bool posCalc_logweight = true
@@ -22,7 +26,7 @@
     string clustershapecollection = ""
     string basicclusterCollection = ""
     string superclusterCollection = ""
-    string shapeAssociation = "hybridShapeAssoc"
+    string shapeAssociation = "dynamicHybridShapeAssoc"
     string debugLevel         = "INFO"
 
   }

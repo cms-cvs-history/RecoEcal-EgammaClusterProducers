@@ -11,6 +11,9 @@
 #include "RecoEcal/EgammaClusterProducers/interface/PiZeroDiscriminatorProducer.h"
 #include "RecoEcal/EgammaClusterProducers/interface/RecHitFilter.h"
 
+#include "RecoEcal/EgammaClusterProducers/interface/FixedMatrixClusterProducer.h"
+#include "RecoEcal/EgammaClusterProducers/interface/FixedMatrixSuperClusterProducer.h"
+
 DEFINE_SEAL_MODULE();
 
 DEFINE_ANOTHER_FWK_MODULE(BumpProducer);
@@ -23,3 +26,6 @@ DEFINE_ANOTHER_FWK_MODULE(PreshowerClusterProducer);
 DEFINE_ANOTHER_FWK_MODULE(PreshowerAnalyzer);
 DEFINE_ANOTHER_FWK_MODULE(PiZeroDiscriminatorProducer);
 DEFINE_ANOTHER_FWK_MODULE(RecHitFilter);
+
+DEFINE_ANOTHER_FWK_MODULE(FixedMatrixSuperClusterProducer);
+DEFINE_ANOTHER_FWK_MODULE(FixedMatrixClusterProducer);

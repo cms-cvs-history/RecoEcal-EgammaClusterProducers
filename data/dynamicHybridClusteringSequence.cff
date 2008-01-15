@@ -1,0 +1,10 @@
+#------------------
+#Hybrid clustering:
+#------------------
+
+# Producer for Hybrid BasicClusters and SuperClusters
+include "RecoEcal/EgammaClusterProducers/data/dynamicHybridSuperClusters.cfi"
+
+# hybrid clustering sequence
+sequence dynamicHybridClusteringSequence = {
+           dynamicHybridSuperClusters }

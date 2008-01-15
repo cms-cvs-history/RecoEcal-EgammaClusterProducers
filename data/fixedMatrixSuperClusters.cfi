@@ -1,0 +1,28 @@
+#
+# $Id: fixedMatrixSuperClusters.cfi,v 1.1 2007/12/12 20:08:18 dlevans Exp $
+#
+# Fixed Matrix SuperCluster producer
+module fixedMatrixSuperClusters = FixedMatrixSuperClusterProducer
+{
+    string VerbosityLevel = "ERROR"
+
+    string endcapClusterProducer        = "fixedMatrixBasicClusters"
+    string barrelClusterProducer        = "fixedMatrixBasicClusters"
+
+    string endcapClusterCollection      = "fixedMatrixEndcapBasicClusters"
+    string barrelClusterCollection      = "fixedMatrixBarrelBasicClusters"
+
+    string endcapSuperclusterCollection = "fixedMatrixEndcapSuperClusters"
+    string barrelSuperclusterCollection = "fixedMatrixBarrelSuperClusters"
+
+    double barrelEtaSearchRoad = 0.06
+    double barrelPhiSearchRoad = 0.80
+    double endcapEtaSearchRoad = 0.14
+    double endcapPhiSearchRoad = 0.60
+    double seedTransverseEnergyThreshold = 1.00
+    bool dynamicPhiRoad = true
+
+    bool doBarrel = false
+    bool doEndcaps = true
+
+}
