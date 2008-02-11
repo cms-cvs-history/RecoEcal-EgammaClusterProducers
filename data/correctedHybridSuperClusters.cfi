@@ -12,5 +12,6 @@ module correctedHybridSuperClusters = EgammaSCCorrectionMaker
   double etThresh =0.
 
   bool applyEnergyCorrection = true
+  bool applyOldCorrection = true	#when true - correction function f(nCry) will be applied
   string corectedSuperClusterCollection = ""
 }
