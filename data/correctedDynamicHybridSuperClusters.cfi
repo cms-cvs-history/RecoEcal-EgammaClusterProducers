@@ -7,10 +7,13 @@ module correctedDynamicHybridSuperClusters = EgammaSCCorrectionMaker
   string recHitCollection = "EcalRecHitsEB"
   string rawSuperClusterProducer = "dynamicHybridSuperClusters"
   string rawSuperClusterCollection = ""
-  string superClusterAlgo = "DynamicHybrid"
+  string superClusterAlgo = "Hybrid"
   double sigmaElectronicNoise = 0.03
   double etThresh =0.
 
   bool applyEnergyCorrection = true
+  bool applyOldCorrection = true        #when true - correction function f(nCry) will be applied
   string corectedSuperClusterCollection = ""
+
 }
+
