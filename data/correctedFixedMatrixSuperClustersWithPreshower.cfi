@@ -1,0 +1,17 @@
+# Energy scale correction for Fixed Matrix Endcap SuperClusters
+
+module correctedFixedMatrixEndcapSuperClusters = EgammaSCCorrectionMaker
+{
+  string VerbosityLevel = "ERROR"
+
+  string recHitProducer = "ecalRecHit"
+  string recHitCollection = "EcalRecHitsEE"
+  string rawSuperClusterProducer = "fixedMatrixSuperClustersWithPreshower"
+  string rawSuperClusterCollection = ""
+  string superClusterAlgo = "FixedMatrix"
+  double sigmaElectronicNoise = 0.15
+
+  bool applyEnergyCorrection = true
+  string corectedSuperClusterCollection = ""
+  double etThresh = 0.
+}

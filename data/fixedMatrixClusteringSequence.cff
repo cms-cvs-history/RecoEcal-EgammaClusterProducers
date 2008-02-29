@@ -12,10 +12,14 @@ include "RecoEcal/EgammaClusterProducers/data/fixedMatrixSuperClusters.cfi"
 # FixedMatrix SuperCluster with Preshower producer
 include "RecoEcal/EgammaClusterProducers/data/fixedMatrixSuperClustersWithPreshower.cfi"
 
+# Corrected FixedMatrix SuperCluster
+include "RecoEcal/EgammaClusterProducers/data/correctedFixedMatrixSuperClustersWithPreshower.cfi"
+
 # create sequence for fixedMatrix clustering
 sequence fixedMatrixClusteringSequence = {
              fixedMatrixBasicClusters,
              fixedMatrixSuperClusters,
-	     fixedMatrixSuperClustersWithPreshower
+	     fixedMatrixSuperClustersWithPreshower,
+	     correctedFixedMatrixSuperClustersWithPreshower
 }
 
