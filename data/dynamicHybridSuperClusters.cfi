@@ -6,16 +6,43 @@
     string ecalhitcollection = "EcalRecHitsEB"
 
     # clustering parameters
+    #
+
+    # threshold on seed RecHits
     double HybridBarrelSeedThr = 1.0
+
+    # phi road parameters
+    # fixed road not used as dynamicPhiRoad
     int32 step = 17
-    bool dynamicPhiRoad = true	// do dynamic phi road
-    double ethresh = .1
+    bool dynamicPhiRoad = true
+  
+    # domino thresholds
+    # fixed ethresh not used as dynamicEThresh
+    double ethresh = 0.1
+    bool dynamicEThresh = true
+    double eThreshA = 0.003
+    double eThreshB = 0.1
 
-    //double ewing = 1.0	// if central crystal of domino
-    double ewing = 0.0		// is > ewing then use 1x5
-				// e.g. always use 1x5
+    # if e1x3 larger than ewing use 1x5
+    # ewing = 0 so always use 1x5
+    double ewing = 0.0
 
+    # seed thresold for dominos
     double eseed = .35
+
+    # for brem recovery
+    PSet bremRecoveryPset = {
+       PSet barrel = {
+          vdouble etVec = { 5.0,  10.0, 15.0, 20.0, 30.0, 40.0, 45.0, 55.0, 135.0, 195.0, 225.0 }
+          vint32 cryVec = { 16,   13,   11,   10,   9,    8,    7,    6,    5,     4,     3 }
+          int32 cryMin = 2
+       }
+       PSet endcap = {
+          double a = 47.85
+          double b = 108.8
+          double c = 0.1201
+       }
+    }
 
     bool posCalc_logweight = true
     double posCalc_t0 = 7.4
@@ -26,7 +53,7 @@
     string clustershapecollection = ""
     string basicclusterCollection = ""
     string superclusterCollection = ""
-    string shapeAssociation = "dynamicHybridShapeAssoc"
+    string shapeAssociation = "hybridShapeAssoc"
     string debugLevel         = "INFO"
 
   }

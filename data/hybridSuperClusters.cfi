@@ -6,11 +6,25 @@
     string ecalhitcollection = "EcalRecHitsEB"
 
     # clustering parameters
+    #
+
+    # threshold on seed RecHits
     double HybridBarrelSeedThr = 1.0
+
+    # phi road parameters
     int32 step = 17
     bool dynamicPhiRoad = false
-    double ethresh = .1
+  
+    # domino thresholds
+    double ethresh = 0.1
+    bool dynamicEThresh = false
+    double eThreshA = 0.003
+    double eThreshB = 0.1
+
+    # if e1x3 larger than ewing use 1x5
     double ewing = 1.0
+
+    # seed thresold for dominos
     double eseed = .35
 
     bool posCalc_logweight = true
