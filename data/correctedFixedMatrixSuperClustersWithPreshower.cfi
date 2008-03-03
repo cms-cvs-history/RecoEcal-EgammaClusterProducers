@@ -19,6 +19,7 @@ module correctedFixedMatrixSuperClustersWithPreshower = EgammaSCCorrectionMaker
   PSet fix_fCorrPset = { 
      vdouble fBremVec = { 0, 0, 0 }
      vdouble fEtEtaVec = { 0, 0, 0 }
+     double brLinearThr = 0.0
   }
 
 }
