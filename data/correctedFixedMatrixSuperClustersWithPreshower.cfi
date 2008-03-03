@@ -8,7 +8,7 @@ module correctedFixedMatrixSuperClustersWithPreshower = EgammaSCCorrectionMaker
   string recHitCollection = "EcalRecHitsEE"
   string rawSuperClusterProducer = "fixedMatrixSuperClustersWithPreshower"
   string rawSuperClusterCollection = ""
-  string superClusterAlgo = "FixedMatrix"  // FIXME
+  string superClusterAlgo = "FixedMatrix"
   double sigmaElectronicNoise = 0.15
 
   bool applyEnergyCorrection = true
