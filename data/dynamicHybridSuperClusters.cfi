@@ -33,9 +33,9 @@
     # for brem recovery
     PSet bremRecoveryPset = {
        PSet barrel = {
-          vdouble etVec = { 5.0,  10.0, 15.0, 20.0, 30.0, 40.0, 45.0, 55.0, 135.0, 195.0, 225.0 }
-          vint32 cryVec = { 16,   13,   11,   10,   9,    8,    7,    6,    5,     4,     3 }
-          int32 cryMin = 2
+          vdouble etVec = { 5.0,  10.0, 15.0, 20.0, 30.0, 40.0, 45.0, 135.0, 195.0, 225.0 }
+          vint32 cryVec = { 17,   15,   13,   12,   11,   10,   9,    8,     7,     6 }
+          int32 cryMin = 5
        }
        PSet endcap = {
           double a = 47.85
