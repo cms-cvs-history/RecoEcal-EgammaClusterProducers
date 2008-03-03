@@ -52,7 +52,7 @@
     string clustershapecollection = ""
     string basicclusterCollection = ""
     string superclusterCollection = ""
-    string shapeAssociation = "hybridShapeAssoc"
+    string shapeAssociation = "dynamicHybridShapeAssoc"
     string debugLevel         = "INFO"
 
   }
