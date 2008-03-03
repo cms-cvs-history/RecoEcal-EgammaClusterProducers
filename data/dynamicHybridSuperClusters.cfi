@@ -6,7 +6,6 @@
     string ecalhitcollection = "EcalRecHitsEB"
 
     # clustering parameters
-    #
 
     # threshold on seed RecHits
     double HybridBarrelSeedThr = 1.0
