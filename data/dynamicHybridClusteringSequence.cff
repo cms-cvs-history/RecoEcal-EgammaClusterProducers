@@ -11,5 +11,6 @@ include "RecoEcal/EgammaClusterProducers/data/correctedDynamicHybridSuperCluster
 # hybrid clustering sequence
 sequence dynamicHybridClusteringSequence = {
            dynamicHybridSuperClusters,
-	   correctedDynamicHybridSuperClusters }
+	   correctedDynamicHybridSuperClusters 
+	}
 

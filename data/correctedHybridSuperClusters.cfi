@@ -12,6 +12,12 @@ module correctedHybridSuperClusters = EgammaSCCorrectionMaker
   double etThresh =0.
 
   bool applyEnergyCorrection = true
-  bool applyOldCorrection = true	#when true - correction function f(nCry) will be applied
   string corectedSuperClusterCollection = ""
+
+  # energy correction
+  PSet hyb_fCorrPset = { 
+     vdouble fBremVec = { -0.01258, 0.03154, 0.9888, -0.0007973, 1.590 }
+    #vdouble fEtEtaVec = { 0.9997, -0.7575, 1.512, 0.8997, 67.02, 4.023  }
+     vdouble fEtEtaVec = { 1.000, -0.8206, 3.16, 0.8637, 44.88, 2.292, 1.023, 8.0}
+  }
 }

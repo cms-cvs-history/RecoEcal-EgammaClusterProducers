@@ -20,6 +20,6 @@ sequence fixedMatrixClusteringSequence = {
              fixedMatrixBasicClusters,
              fixedMatrixSuperClusters,
 	     fixedMatrixSuperClustersWithPreshower,
-	     correctedFixedMatrixSuperClustersWithPreshower
-}
+	    correctedFixedMatrixSuperClustersWithPreshower
+	}
 

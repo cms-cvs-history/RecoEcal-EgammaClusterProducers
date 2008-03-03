@@ -15,4 +15,11 @@ module correctedIslandBarrelSuperClusters = EgammaSCCorrectionMaker
   bool applyEnergyCorrection = true
   string corectedSuperClusterCollection = ""
   double etThresh = 0.
+ 
+  
+  PSet isl_fCorrPset = {
+     vdouble fBremVec = { 0 }
+     vdouble fEtEtaVec = { 0 }
+   }
+
 }
