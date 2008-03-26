@@ -10,7 +10,6 @@ module correctedIslandBarrelSuperClusters = EgammaSCCorrectionMaker
   string superClusterAlgo = "Island"
   double sigmaElectronicNoise = 0.03
 
-  bool applyOldCorrection = true	
   bool applyEnergyCorrection = true
   string corectedSuperClusterCollection = ""
   double etThresh = 0.
