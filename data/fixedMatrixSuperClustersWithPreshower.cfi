@@ -7,11 +7,8 @@ module fixedMatrixSuperClustersWithPreshower = PreshowerClusterProducer
 
   # building preshower clusters
 
-    string preshRecHitProducer      = "ecalPreshowerRecHit"
-    string preshRecHitCollection    = "EcalRecHitsES"
-
-    string endcapSClusterProducer   = "fixedMatrixSuperClusters"
-    string endcapSClusterCollection = "fixedMatrixEndcapSuperClusters"
+    InputTag preshRecHitProducer      = ecalPreshowerRecHit:EcalRecHitsES
+    InputTag endcapSClusterProducer   = fixedMatrixSuperClusters:fixedMatrixEndcapSuperClusters
 
     string preshClusterCollectionX = "preshowerXClusters"
     string preshClusterCollectionY = "preshowerYClusters"
