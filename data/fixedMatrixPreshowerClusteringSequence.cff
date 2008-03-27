@@ -1,0 +1,15 @@
+#
+# $Id: fixedMatrixPreshowerClusteringSequence.cff,v 1.4 2008/03/03 19:50:58 futyand Exp $
+#
+#------------------
+#Preshower clustering:
+#------------------
+
+# producer for endcap SuperClusters including preshower energy
+include "RecoEcal/EgammaClusterProducers/data/correctedFixedMatrixSuperClustersWithPreshower.cfi"
+# producer for preshower cluster shapes
+include "RecoEcal/EgammaClusterProducers/data/fixedMatrixPreshowerClusterShape.cfi"
+
+# create sequence for preshower clustering
+sequence fixedMatrixPreshowerClusteringSequence = { correctedFixedMatrixSuperClustersWithPreshower, fixedMatrixPreshowerClusterShape }
+
