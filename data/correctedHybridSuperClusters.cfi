@@ -3,10 +3,9 @@ module correctedHybridSuperClusters = EgammaSCCorrectionMaker
 {
   string VerbosityLevel = "ERROR"
 
-  string recHitProducer = "ecalRecHit"
-  string recHitCollection = "EcalRecHitsEB"
-  string rawSuperClusterProducer = "hybridSuperClusters"
-  string rawSuperClusterCollection = ""
+  InputTag recHitProducer = ecalRecHit:EcalRecHitsEB
+  InputTag rawSuperClusterProducer = hybridSuperClusters
+
   string superClusterAlgo = "Hybrid"
   double sigmaElectronicNoise = 0.03
   double etThresh =0.
@@ -16,8 +15,10 @@ module correctedHybridSuperClusters = EgammaSCCorrectionMaker
 
   # energy correction
   PSet hyb_fCorrPset = { 
-     vdouble fBremVec = { -0.01258, 0.03154, 0.9888, -0.0007973, 1.590 }
-     vdouble fEtEtaVec = { 1.000, -0.8206, 3.16, 0.8637, 44.88, 2.292, 1.023, 8.0}
-     double brLinearThr = 12.0
+     vdouble fBremVec  = { -0.01217, 0.031, 0.9887, -0.0003776, 1.598 }
+     vdouble fEtEtaVec = { 1.002, -0.9498, 5.956, 0.0, 0.7409, 22.05, 1.349, 8.0, 1.023, -0.00181, 0.0 }
+     vint corrF        = {1, 1, 0}
+     double brLinearLowThr = 0.7
+     double brLinearHighThr = 8.0	
   }
 }
