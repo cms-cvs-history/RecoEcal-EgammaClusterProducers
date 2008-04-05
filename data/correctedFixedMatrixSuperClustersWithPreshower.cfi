@@ -4,15 +4,16 @@ module correctedFixedMatrixSuperClustersWithPreshower = EgammaSCCorrectionMaker
 {
   string VerbosityLevel = "ERROR"
 
-  InputTag recHitProducer = ecalRecHit:EcalRecHitsEE
-  InputTag rawSuperClusterProducer = fixedMatrixSuperClustersWithPreshower
-
+  string recHitProducer = "ecalRecHit"
+  string recHitCollection = "EcalRecHitsEE"
+  string rawSuperClusterProducer = "fixedMatrixSuperClustersWithPreshower"
+  string rawSuperClusterCollection = ""
   string superClusterAlgo = "FixedMatrix"
   double sigmaElectronicNoise = 0.15
-
+  double etThresh = 0.
+  
   bool applyEnergyCorrection = true
   string corectedSuperClusterCollection = ""
-  double etThresh = 0.
 
   # energy correction
   PSet fix_fCorrPset = { 
