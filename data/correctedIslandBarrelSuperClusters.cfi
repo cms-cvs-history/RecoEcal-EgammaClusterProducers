@@ -4,14 +4,12 @@ module correctedIslandBarrelSuperClusters = EgammaSCCorrectionMaker
 {
   string VerbosityLevel = "ERROR"
 
-  string recHitProducer = "ecalRecHit"
-  string recHitCollection = "EcalRecHitsEB"
-  string rawSuperClusterProducer   = "islandSuperClusters"
-  string rawSuperClusterCollection = "islandBarrelSuperClusters"
+  InputTag recHitProducer = ecalRecHit:EcalRecHitsEB
+  InputTag rawSuperClusterProducer = islandSuperClusters:islandBarrelSuperClusters
+
   string superClusterAlgo = "Island"
   double sigmaElectronicNoise = 0.03
 
-  bool applyOldCorrection = true	
   bool applyEnergyCorrection = true
   string corectedSuperClusterCollection = ""
   double etThresh = 0.
@@ -20,7 +18,9 @@ module correctedIslandBarrelSuperClusters = EgammaSCCorrectionMaker
   PSet isl_fCorrPset = {
      vdouble fBremVec = { 0 }
      vdouble fEtEtaVec = { 0 }
-     double brLinearThr = 0.0
+     vint32 corrF = { 0 }
+     double brLinearLowThr = 0.0
+     double brLinearHighThr = 0.0
    }
 
 }
