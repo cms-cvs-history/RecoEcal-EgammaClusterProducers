@@ -4,16 +4,15 @@ module correctedIslandEndcapSuperClusters = EgammaSCCorrectionMaker
 {
   string VerbosityLevel = "ERROR"
 
-  string recHitProducer = "ecalRecHit"
-  string recHitCollection = "EcalRecHitsEE"
-  string rawSuperClusterProducer = "islandSuperClusters"
-  string rawSuperClusterCollection = "islandEndcapSuperClusters"
+  InputTag recHitProducer = ecalRecHit:EcalRecHitsEE
+  InputTag rawSuperClusterProducer = islandSuperClusters:islandEndcapSuperClusters
+
   string superClusterAlgo = "Island"
   double sigmaElectronicNoise = 0.15
+  double etThresh = 0.
 
   bool applyEnergyCorrection = true
   string corectedSuperClusterCollection = ""
-  double etThresh = 0.
  
   PSet isl_fCorrPset = { 
      vdouble fBremVec = { 0 }
