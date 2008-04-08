@@ -16,7 +16,7 @@ module correctedDynamicHybridSuperClusters = EgammaSCCorrectionMaker
   # energy correction
   PSet dyn_fCorrPset = { 
      vdouble fBremVec  = { -0.01762, 0.04224, 0.9793, 0.0008075, 1.774 } 
-     vdouble fEtEtaVec = { 0.9929, -0.01751, 0.0, -4.636, 5.945, 737.9, 4.057, 8.0, 1.023, 0.0 }
+     vdouble fEtEtaVec = { 0.9929, -0.01751, 0.0, -4.636, 5.945, 737.9, 4.057, 8.0, 1.023, 0.0,  0.0, 1.0, 0.0}
      double brLinearThr = 10.0
   }
 }
