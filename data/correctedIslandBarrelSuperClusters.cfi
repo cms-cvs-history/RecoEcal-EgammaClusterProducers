@@ -17,9 +17,7 @@ module correctedIslandBarrelSuperClusters = EgammaSCCorrectionMaker
   PSet isl_fCorrPset = {
      vdouble fBremVec = { 0 }
      vdouble fEtEtaVec = { 0 }
-     vint32 corrF = { 0 }
-     double brLinearLowThr = 0.0
-     double brLinearHighThr = 0.0
+     double brLinearThr = 0.0
    }
 
 }
