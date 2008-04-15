@@ -10,12 +10,10 @@ module correctedIslandBarrelSuperClusters = EgammaSCCorrectionMaker
   string rawSuperClusterCollection = "islandBarrelSuperClusters"
   string superClusterAlgo = "Island"
   double sigmaElectronicNoise = 0.03
+  double etThresh = 0.
 
-  bool applyOldCorrection = true	
   bool applyEnergyCorrection = true
   string corectedSuperClusterCollection = ""
-  double etThresh = 0.
- 
   
   PSet isl_fCorrPset = {
      vdouble fBremVec = { 0 }
