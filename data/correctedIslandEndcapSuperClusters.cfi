@@ -4,9 +4,10 @@ module correctedIslandEndcapSuperClusters = EgammaSCCorrectionMaker
 {
   string VerbosityLevel = "ERROR"
 
-  InputTag recHitProducer = ecalRecHit:EcalRecHitsEE
-  InputTag rawSuperClusterProducer = islandSuperClusters:islandEndcapSuperClusters
-
+  string recHitProducer = "ecalRecHit"
+  string recHitCollection = "EcalRecHitsEE"
+  string rawSuperClusterProducer = "islandSuperClusters"
+  string rawSuperClusterCollection = "islandEndcapSuperClusters"
   string superClusterAlgo = "Island"
   double sigmaElectronicNoise = 0.15
   double etThresh = 0.

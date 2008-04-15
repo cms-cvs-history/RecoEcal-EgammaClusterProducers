@@ -3,9 +3,10 @@ module correctedDynamicHybridSuperClusters = EgammaSCCorrectionMaker
 {
   string VerbosityLevel = "ERROR"
 
-  InputTag recHitProducer = ecalRecHit:EcalRecHitsEB
-  InputTag rawSuperClusterProducer = dynamicHybridSuperClusters
-
+  string recHitProducer = "ecalRecHit"
+  string recHitCollection = "EcalRecHitsEB"
+  string rawSuperClusterProducer = "dynamicHybridSuperClusters"
+  string rawSuperClusterCollection = ""
   string superClusterAlgo = "DynamicHybrid"
   double sigmaElectronicNoise = 0.03
   double etThresh =0.
