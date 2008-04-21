@@ -5,3 +5,4 @@
 include "Geometry/CMSCommonData/data/cmsIdealGeometryXML.cfi"
 include "MagneticField/Engine/data/volumeBasedMagneticField.cfi"
 include "Geometry/CaloEventSetup/data/CaloGeometry.cff"
+include "Geometry/CaloEventSetup/data/CaloTopology.cfi"
