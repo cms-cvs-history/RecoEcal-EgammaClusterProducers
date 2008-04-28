@@ -1,0 +1,41 @@
+module interestingEcalDetIdEB = InterestingDetIdCollectionProducer
+{
+    InputTag recHitsLabel = ecalRecHit:EcalRecHitsEB
+    InputTag basicClustersLabel = hybridSuperClusters
+    
+    string interestingDetIdCollection = ""
+    
+    int32 etaSize = 5
+    int32 phiSize = 5
+}
+
+module interestingEcalDetIdEE = InterestingDetIdCollectionProducer
+{
+    InputTag recHitsLabel = ecalRecHit:EcalRecHitsEE
+    InputTag basicClustersLabel = fixedMatrixBasicClusters:fixedMatrixEndcapBasicClusters
+    
+    string interestingDetIdCollection = ""
+    
+    int32 etaSize = 5
+    int32 phiSize = 5
+}
+
+module reducedEcalRecHitsEB = ReducedRecHitCollectionProducer
+{
+    InputTag recHitsLabel = ecalRecHit:EcalRecHitsEB
+    VInputTag interestingDetIdCollections = { interestingEcalDetIdEB }
+    
+    string reducedHitsCollection = ""
+    
+}
+
+module reducedEcalRecHitsEE = ReducedRecHitCollectionProducer
+{
+    InputTag recHitsLabel = ecalRecHit:EcalRecHitsEE
+    VInputTag interestingDetIdCollections = { interestingEcalDetIdEE }
+    
+    string reducedHitsCollection = ""
+    
+}
+
+sequence reducedRecHitsSequence = { interestingEcalDetIdEB, interestingEcalDetIdEE, reducedEcalRecHitsEB, reducedEcalRecHitsEE }
