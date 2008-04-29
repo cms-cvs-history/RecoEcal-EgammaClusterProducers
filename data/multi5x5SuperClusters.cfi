@@ -1,8 +1,8 @@
 #
-# $Id: multi5x5SuperClusters.cfi,v 1.3 2008/02/29 01:47:16 dlevans Exp $
+# $Id: multi5x5SuperClusters.cfi,v 1.1 2008/04/29 15:27:38 dlevans Exp $
 #
-# Fixed Matrix SuperCluster producer
-module multi5x5SuperClusters = FixedMatrixSuperClusterProducer
+# Multi5x5 SuperCluster producer
+module multi5x5SuperClusters = Multi5x5SuperClusterProducer
 {
     string VerbosityLevel = "ERROR"
 

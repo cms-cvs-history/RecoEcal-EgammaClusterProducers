@@ -1,4 +1,4 @@
-# Energy scale correction for Fixed Matrix Endcap SuperClusters
+# Energy scale correction for Multi5x5 Endcap SuperClusters
 
 module correctedMulti5x5SuperClustersWithPreshower = EgammaSCCorrectionMaker
 {
