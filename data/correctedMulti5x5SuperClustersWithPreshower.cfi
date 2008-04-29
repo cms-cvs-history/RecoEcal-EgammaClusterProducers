@@ -1,0 +1,26 @@
+# Energy scale correction for Fixed Matrix Endcap SuperClusters
+
+module correctedMulti5x5SuperClustersWithPreshower = EgammaSCCorrectionMaker
+{
+  string VerbosityLevel = "ERROR"
+
+  InputTag recHitProducer = ecalRecHit:EcalRecHitsEE
+  InputTag rawSuperClusterProducer = multi5x5SuperClustersWithPreshower
+
+  string superClusterAlgo = "Multi5x5"
+  double sigmaElectronicNoise = 0.15
+  double etThresh = 0.
+  
+  bool applyEnergyCorrection = true
+  string corectedSuperClusterCollection = ""
+
+  # energy correction
+  PSet fix_fCorrPset = { 
+     vdouble fBremVec  = {-0.1234, 0.2347, 0.8831, 0.002377, 1.037 }
+     vdouble fEtEtaVec = { 1.002, -0.09255, 0.0, 0.0, -4.072, 67.93, -7.333, 0.0, 0.0, 0.0, 2.6}
+     vint32 corrF        = {0, 0, 1}
+     double brLinearLowThr = 0.9
+     double brLinearHighThr = 5.0
+  }
+
+}

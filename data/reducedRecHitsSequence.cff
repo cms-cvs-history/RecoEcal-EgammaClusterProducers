@@ -12,7 +12,7 @@ module interestingEcalDetIdEB = InterestingDetIdCollectionProducer
 module interestingEcalDetIdEE = InterestingDetIdCollectionProducer
 {
     InputTag recHitsLabel = ecalRecHit:EcalRecHitsEE
-    InputTag basicClustersLabel = fixedMatrixBasicClusters:fixedMatrixEndcapBasicClusters
+    InputTag basicClustersLabel = multi5x5BasicClusters:multi5x5EndcapBasicClusters
     
     string interestingDetIdCollection = ""
     
