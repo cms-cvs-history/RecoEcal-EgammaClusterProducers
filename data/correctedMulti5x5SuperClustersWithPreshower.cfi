@@ -5,7 +5,7 @@ module correctedMulti5x5SuperClustersWithPreshower = EgammaSCCorrectionMaker
   string VerbosityLevel = "ERROR"
 
   InputTag recHitProducer = ecalRecHit:EcalRecHitsEE
-  InputTag rawSuperClusterProducer = fixedMatrixSuperClustersWithPreshower
+  InputTag rawSuperClusterProducer = multi5x5SuperClustersWithPreshower
 
   string superClusterAlgo = "Multi5x5"
   double sigmaElectronicNoise = 0.15
