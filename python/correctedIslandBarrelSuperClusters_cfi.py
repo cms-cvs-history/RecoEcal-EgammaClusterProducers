@@ -7,13 +7,12 @@ correctedIslandBarrelSuperClusters = cms.EDFilter("EgammaSCCorrectionMaker",
     superClusterAlgo = cms.string('Island'),
     etThresh = cms.double(0.0),
     rawSuperClusterProducer = cms.InputTag("islandSuperClusters","islandBarrelSuperClusters"),
+    applyOldCorrection = cms.bool(True),
     applyEnergyCorrection = cms.bool(True),
     isl_fCorrPset = cms.PSet(
-        brLinearLowThr = cms.double(0.0),
+        brLinearThr = cms.double(0.0),
         fBremVec = cms.vdouble(0.0),
-        brLinearHighThr = cms.double(0.0),
-        fEtEtaVec = cms.vdouble(0.0),
-        corrF = cms.vint32(0)
+        fEtEtaVec = cms.vdouble(0.0)
     ),
     VerbosityLevel = cms.string('ERROR'),
     recHitProducer = cms.InputTag("ecalRecHit","EcalRecHitsEB")
