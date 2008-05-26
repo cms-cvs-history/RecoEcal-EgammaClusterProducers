@@ -1,5 +1,5 @@
 #
-# $Id: multi5x5SuperClusters.cfi,v 1.1 2008/04/29 15:27:38 dlevans Exp $
+# $Id: multi5x5SuperClusters.cfi,v 1.2 2008/04/29 15:49:30 dlevans Exp $
 #
 # Multi5x5 SuperCluster producer
 module multi5x5SuperClusters = Multi5x5SuperClusterProducer
@@ -20,7 +20,7 @@ module multi5x5SuperClusters = Multi5x5SuperClusterProducer
     double endcapEtaSearchRoad = 0.14
     double endcapPhiSearchRoad = 0.60
     double seedTransverseEnergyThreshold = 1.00
-    bool dynamicPhiRoad = true
+    bool dynamicPhiRoad = false
 
     # for brem recovery
     PSet bremRecoveryPset = {
