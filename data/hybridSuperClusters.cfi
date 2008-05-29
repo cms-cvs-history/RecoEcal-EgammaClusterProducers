@@ -22,7 +22,8 @@
     double eThreshB = 0.1
 
     # if e1x3 larger than ewing use 1x5
-    double ewing = 1.0
+    # e.g. always build 1x5
+    double ewing = 0.0
 
     # seed thresold for dominos
     double eseed = .35
