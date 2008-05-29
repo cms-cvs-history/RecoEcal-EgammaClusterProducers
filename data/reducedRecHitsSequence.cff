@@ -1,7 +1,7 @@
 module interestingEcalDetIdEB = InterestingDetIdCollectionProducer
 {
     InputTag recHitsLabel = ecalRecHit:EcalRecHitsEB
-    InputTag basicClustersLabel = hybridSuperClusters
+    InputTag basicClustersLabel = hybridSuperClusters:hybridBarrelBasicClusters
     
     string interestingDetIdCollection = ""
     

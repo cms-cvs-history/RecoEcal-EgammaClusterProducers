@@ -34,7 +34,7 @@
 
     # output collections
     string clustershapecollection = ""
-    string basicclusterCollection = ""
+    string basicclusterCollection = "hybridBarrelBasicClusters"
     string superclusterCollection = ""
     string shapeAssociation = "hybridShapeAssoc"
     string debugLevel         = "INFO"
