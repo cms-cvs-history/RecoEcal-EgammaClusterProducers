@@ -1,0 +1,21 @@
+
+#------------------
+# clustering:
+#------------------
+
+#  BasicCluster producer
+include "RecoEcal/EgammaClusterProducers/data/cosmicBasicClusters.cfi"
+
+#  SuperCluster producer
+#include "RecoEcal/EgammaClusterProducers/data/SuperClusters.cfi"
+
+#  SuperCluster with Preshower producer
+#include "RecoEcal/EgammaClusterProducers/data/SuperClustersWithPreshower.cfi"
+
+# create sequence for  clustering
+sequence cosmicClusteringSequence = {
+             cosmicBasicClusters #,
+             #SuperClusters,
+	     #SuperClustersWithPreshower
+	}
+
