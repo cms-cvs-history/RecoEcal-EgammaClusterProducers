@@ -7,15 +7,15 @@
 include "RecoEcal/EgammaClusterProducers/data/cosmicBasicClusters.cfi"
 
 #  SuperCluster producer
-#include "RecoEcal/EgammaClusterProducers/data/SuperClusters.cfi"
+include "RecoEcal/EgammaClusterProducers/data/cosmicSuperClusters.cfi"
 
 #  SuperCluster with Preshower producer
 #include "RecoEcal/EgammaClusterProducers/data/SuperClustersWithPreshower.cfi"
 
 # create sequence for  clustering
 sequence cosmicClusteringSequence = {
-             cosmicBasicClusters #,
-             #SuperClusters,
+             cosmicBasicClusters ,
+             cosmicSuperClusters #,
 	     #SuperClustersWithPreshower
 	}
 
