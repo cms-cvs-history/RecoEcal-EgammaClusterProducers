@@ -1,0 +1,36 @@
+#  BasicCluster producer
+module cosmicBasicClusters = CosmicClusterProducer
+{ 
+    string VerbosityLevel = "ERROR"
+
+    string barrelHitProducer   = "ecalRecHit"
+    string endcapHitProducer   = "ecalRecHit"
+
+    string barrelHitCollection = "EcalRecHitsEB"
+    string endcapHitCollection = "EcalRecHitsEE"
+
+    string barrelClusterCollection = "CosmicBarrelBasicClusters"
+    string endcapClusterCollection = "CosmicEndcapBasicClusters"
+
+    double BarrelSeedThr   = 0.04073
+    double BarrelSingleThr = 0.12221
+    double BarrelSecondThr = 0.04073
+    double EndcapSeedThr   = 0.044
+    double EndcapSingleThr = 0.135
+    double EndcapSecondThr = 0.044
+
+    bool posCalc_logweight = true
+    double posCalc_t0_barl = 7.4
+    double posCalc_t0_endc = 3.1
+    double posCalc_t0_endcPresh = 1.2
+    double posCalc_w0 = 4.2
+    double posCalc_x0 = 0.89
+    string clustershapecollectionEB = "CosmicBarrelShape"
+    string clustershapecollectionEE = "CosmicEndcapShape"
+    string barrelShapeAssociation = "CosmicBarrelShapeAssoc"
+    string endcapShapeAssociation = "CosmicEndcapShapeAssoc"
+	
+	untracked vint32 maskedChannels = {-1}
+
+
+}
