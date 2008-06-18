@@ -30,7 +30,7 @@ module cosmicBasicClusters = CosmicClusterProducer
     string barrelShapeAssociation = "CosmicBarrelShapeAssoc"
     string endcapShapeAssociation = "CosmicEndcapShapeAssoc"
 	
-	untracked vint32 maskedChannels = {-1}
+    untracked vint32 maskedChannels = { }
 
 
 }
