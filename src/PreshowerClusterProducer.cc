@@ -25,7 +25,7 @@
 #include "Geometry/CaloGeometry/interface/CaloGeometry.h"
 #include "Geometry/CaloGeometry/interface/CaloCellGeometry.h"
 #include "Geometry/CaloGeometry/interface/TruncatedPyramid.h"
-#include "Geometry/EcalPreshowerAlgo/interface/EcalPreshowerGeometry.h"
+#include "Geometry/EcalAlgo/interface/EcalPreshowerGeometry.h"
 #include "Geometry/CaloTopology/interface/EcalPreshowerTopology.h"
 #include "Geometry/Records/interface/CaloGeometryRecord.h"
 #include "DataFormats/HcalDetId/interface/HcalDetId.h"
@@ -117,7 +117,6 @@ void PreshowerClusterProducer::produce(edm::Event& evt, const edm::EventSetup& e
   const EcalRecHitCollection* rechits = pRecHits.product(); // EcalRecHitCollection hit_collection = *rhcHandle;
   if ( debugL == PreshowerClusterAlgo::pDEBUG ) std::cout << "PreshowerClusterProducerInfo: ### Total # of preshower RecHits: " 
                                                           << rechits->size() << std::endl;
-  if ( rechits->size() <= 0 ) return;
 
   // make the map of rechits:
   std::map<DetId, EcalRecHit> rechits_map;
