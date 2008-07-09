@@ -15,9 +15,12 @@ module cosmicBasicClusters = CosmicClusterProducer
     double BarrelSeedThr   = 0.04073
     double BarrelSingleThr = 0.12221
     double BarrelSecondThr = 0.04073
+    double BarrelSupThr    = 0.029331
     double EndcapSeedThr   = 0.044
     double EndcapSingleThr = 0.135
     double EndcapSecondThr = 0.044
+    double EndcapSupThr    = 0.029331
+
 
     bool posCalc_logweight = true
     double posCalc_t0_barl = 7.4
