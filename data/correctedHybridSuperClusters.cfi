@@ -15,9 +15,9 @@ module correctedHybridSuperClusters = EgammaSCCorrectionMaker
 
   # energy correction
   PSet hyb_fCorrPset = { 
-     vdouble fBremVec  = { -0.01217, 0.031, 0.9887, -0.0003776, 1.598 }
-     vdouble fEtEtaVec = { 1.001, -0.8654, 3.131, 0.0, 0.735, 20.72, 1.169, 8.0, 1.023, -0.00181, 0.0, 1.0, 0.0 }
-     double brLinearLowThr = 0.7
-     double brLinearHighThr = 8.0
+     vdouble fBremVec  = { -0.01119, 0.02833, 0.9842, -0.0002623, 1.617 }
+     vdouble fEtEtaVec = { 1.002, -1.03, 7.489, 0.0, 0.7454, 20.37, 1.077, 8.0, 1.023, -0.00181, 0.0, 1.0, 0.0 }
+     double brLinearLowThr = 1.0
+     double brLinearHighThr = 6.0
   }
 }
