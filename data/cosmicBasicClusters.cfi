@@ -8,18 +8,24 @@ module cosmicBasicClusters = CosmicClusterProducer
 
     string barrelHitCollection = "EcalRecHitsEB"
     string endcapHitCollection = "EcalRecHitsEE"
+	
+	string barrelUnHitProducer   = "ecalFixedAlphaBetaFitUncalibRecHit"
+    string endcapUnHitProducer   = "ecalFixedAlphaBetaFitUncalibRecHit"
+
+    string barrelUnHitCollection = "EcalUncalibRecHitsEB"
+    string endcapUnHitCollection = "EcalUncalibRecHitsEE"
 
     string barrelClusterCollection = "CosmicBarrelBasicClusters"
     string endcapClusterCollection = "CosmicEndcapBasicClusters"
 
-    double BarrelSeedThr   = 0.04073
-    double BarrelSingleThr = 0.12221
-    double BarrelSecondThr = 0.04073
-    double BarrelSupThr    = 0.029331
-    double EndcapSeedThr   = 0.044
-    double EndcapSingleThr = 0.135
-    double EndcapSecondThr = 0.044
-    double EndcapSupThr    = 0.029331
+    double BarrelSeedThr  = 4.99
+    double BarrelSingleThr = 14.99
+    double BarrelSecondThr = 4.99
+    double BarrelSupThr    = 2.0
+    double EndcapSeedThr   = 9.99
+    double EndcapSingleThr = 25.99
+    double EndcapSecondThr = 9.99
+    double EndcapSupThr    = 3.0
 
     bool posCalc_logweight = true
     double posCalc_t0_barl = 7.4
@@ -32,7 +38,5 @@ module cosmicBasicClusters = CosmicClusterProducer
     string barrelShapeAssociation = "CosmicBarrelShapeAssoc"
     string endcapShapeAssociation = "CosmicEndcapShapeAssoc"
 	
-	untracked vint32 maskedChannels = {-1}
-
 
 }
