@@ -1,7 +1,0 @@
-#--------------------------------
-# geometry needed for clustering
-#--------------------------------
-# for the geometry:
-include "Geometry/CMSCommonData/data/cmsIdealGeometryXML.cfi"
-include "Geometry/CaloEventSetup/data/CaloGeometry.cff"
-include "Geometry/CaloEventSetup/data/CaloTopology.cfi"
