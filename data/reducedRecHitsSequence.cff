@@ -23,7 +23,7 @@ module interestingEcalDetIdEE = InterestingDetIdCollectionProducer
 module reducedEcalRecHitsEB = ReducedRecHitCollectionProducer
 {
     InputTag recHitsLabel = ecalRecHit:EcalRecHitsEB
-    VInputTag interestingDetIdCollections = { interestingEcalDetIdEB }
+    VInputTag interestingDetIdCollections = { interestingEcalDetIdEB, interestingEleIsoDetIdEB, interestingGamIsoDetIdEB, caloRecoTauProducer }
     
     string reducedHitsCollection = ""
     
@@ -32,7 +32,7 @@ module reducedEcalRecHitsEB = ReducedRecHitCollectionProducer
 module reducedEcalRecHitsEE = ReducedRecHitCollectionProducer
 {
     InputTag recHitsLabel = ecalRecHit:EcalRecHitsEE
-    VInputTag interestingDetIdCollections = { interestingEcalDetIdEE }
+    VInputTag interestingDetIdCollections = { interestingEcalDetIdEE, interestingEleIsoDetIdEE, interestingGamIsoDetIdEE, caloRecoTauProducer }
     
     string reducedHitsCollection = ""
     
