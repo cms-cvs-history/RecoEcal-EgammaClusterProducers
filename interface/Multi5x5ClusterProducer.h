@@ -18,6 +18,7 @@
 #include "Geometry/CaloTopology/interface/CaloSubdetectorTopology.h"
 
 #include "DataFormats/EgammaReco/interface/BasicClusterFwd.h"
+#include "DataFormats/CaloRecHit/interface/CaloClusterFwd.h"
 
 //
 
@@ -74,9 +75,9 @@ class Multi5x5ClusterProducer : public edm::EDProducer
                               const std::string& hitCollection,
                               const std::string& clusterCollection,
 			      const std::string& clusterShapeAssociation,
-                              const Multi5x5ClusterAlgo::EcalPart& ecalPart);
+                              const reco::CaloID::Detectors detector);
 
-      void outputValidationInfo(reco::BasicClusterRefVector &clusterRefVector);
+      void outputValidationInfo(reco::CaloClusterPtrVector &clusterPtrVector);
 };
 
 
