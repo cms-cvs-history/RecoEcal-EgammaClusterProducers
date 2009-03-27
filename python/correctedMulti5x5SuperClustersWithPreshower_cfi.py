@@ -10,17 +10,13 @@ correctedMulti5x5SuperClustersWithPreshower = cms.EDFilter("EgammaSCCorrectionMa
     applyEnergyCorrection = cms.bool(True),
     # energy correction
     fix_fCorrPset = cms.PSet(
-       brLinearLowThr = cms.double(0.9),
-       
-       fBremVec = cms.vdouble(-0.05228, 0.08738, 0.9508, 0.002677, 1.221),
-       brLinearHighThr = cms.double(6.0),
-       
-       fEtEtaVec = cms.vdouble(1,
-                               -0.4386,  -32.38, 
-                                0.6372,   15.67, 
-                               -0.0928,  -2.462, 
-                                1.138,  20.93)
-       
+        brLinearLowThr = cms.double(0.6),
+        fBremVec = cms.vdouble(-0.04163, 0.08552, 0.95048, -0.002308, 1.077),
+        brLinearHighThr = cms.double(6.0),
+        fEtEtaVec = cms.vdouble(0.9746, -6.512, 0, 0,
+                                0.02771, 4.983, 0, 0,
+                                -0.007288, -0.9446, 0, 0,
+                                0, 0, 0, 1, 1)
     ),
     VerbosityLevel = cms.string('ERROR'),
     recHitProducer = cms.InputTag("ecalRecHit","EcalRecHitsEE")
