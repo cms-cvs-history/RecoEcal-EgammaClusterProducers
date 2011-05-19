@@ -19,7 +19,9 @@
 
 #include "RecoLocalCalo/EcalRecAlgos/interface/EcalSeverityLevelAlgoRcd.h"
 #include "RecoLocalCalo/EcalRecAlgos/interface/EcalSeverityLevelAlgo.h"
+#include "RecoEcal/EgammaCoreTools/interface/EcalTools.h"
 
+// $Id: InterestingDetIdCollectionProducer.cc,v 1.9 2011/05/17 09:14:16 argiro Exp $
 
 InterestingDetIdCollectionProducer::InterestingDetIdCollectionProducer(const edm::ParameterSet& iConfig) 
 {
@@ -37,7 +39,9 @@ InterestingDetIdCollectionProducer::InterestingDetIdCollectionProducer(const edm
    //register your products
   produces< DetIdCollection > (interestingDetIdCollection_) ;
 
-  severityLevel_ = iConfig.getParameter<int>("severityLevel");
+  severityLevel_  = iConfig.getParameter<int>("severityLevel");
+  keepNextToDead_ = iConfig.getParameter<bool>("keepNextToDead");
+  keepNextToBoundary_ = iConfig.getParameter<bool>("keepNextToBoundary");
 }
 
 
@@ -72,10 +76,13 @@ InterestingDetIdCollectionProducer::produce (edm::Event& iEvent,
   iEvent.getByLabel(recHitsLabel_,recHitsHandle);
 
   //Create empty output collections
-  std::auto_ptr< DetIdCollection > detIdCollection (new DetIdCollection() ) ;
-  
+  std::vector<DetId> indexToStore;
+  indexToStore.reserve(1000);
+
   reco::BasicClusterCollection::const_iterator clusIt;
-  
+
+  std::vector<DetId> xtalsToStore;
+  xtalsToStore.reserve(50);
   for (clusIt=pClusters->begin(); clusIt!=pClusters->end(); clusIt++) {
     //PG barrel
     
@@ -101,38 +108,61 @@ InterestingDetIdCollectionProducer::produce (edm::Event& iEvent,
     continue;
     
     const CaloSubdetectorTopology* topology  = caloTopology_->getSubdetectorTopology(eMaxId.det(),eMaxId.subdetId());
-    std::vector<DetId> xtalsToStore=topology->getWindow(eMaxId,minimalEtaSize_,minimalPhiSize_);
+
+    xtalsToStore=topology->getWindow(eMaxId,minimalEtaSize_,minimalPhiSize_);
     std::vector<std::pair<DetId,float > > xtalsInClus=(*clusIt).hitsAndFractions();
     
     for (unsigned int ii=0;ii<xtalsInClus.size();ii++)
       {
-	if (std::find(xtalsToStore.begin(),xtalsToStore.end(),xtalsInClus[ii].first) == xtalsToStore.end())
 	  xtalsToStore.push_back(xtalsInClus[ii].first);
       }
     
-    for (unsigned int iCry=0;iCry<xtalsToStore.size();iCry++)
-      {
-	if ( 
-	    std::find(detIdCollection->begin(),detIdCollection->end(),xtalsToStore[iCry]) == detIdCollection->end()
-	    )
-	  detIdCollection->push_back(xtalsToStore[iCry]);
-      }     
+    indexToStore.insert(indexToStore.end(),xtalsToStore.begin(),xtalsToStore.end());
   }
 
-  // also add recHits of dead TT if the corresponding TP is saturated
+
+ 
   for (EcalRecHitCollection::const_iterator it = recHitsHandle->begin(); it != recHitsHandle->end(); ++it) {
-          if ( it->checkFlag(EcalRecHit::kTPSaturated) ) {
-                  if ( std::find( detIdCollection->begin(), detIdCollection->end(), it->id() ) == detIdCollection->end()
-                     ) {
-                          detIdCollection->push_back( it->id() );
-                  }
-          }else if ( severityLevel_>=0 && severity_->severityLevel(*it) >=severityLevel_){
-	    detIdCollection->push_back( it->id() );
-	  }
+    // also add recHits of dead TT if the corresponding TP is saturated
+    if ( it->checkFlag(EcalRecHit::kTPSaturated) ) {
+      indexToStore.push_back(it->id());
+    }
+    // add hits for severities above a threshold
+    if ( severityLevel_>=0 && 
+	 severity_->severityLevel(*it) >=severityLevel_){
+      
+      indexToStore.push_back(it->id());
+    } 
+    if (keepNextToDead_) {
+      // also keep channels next to dead ones
+      if (EcalTools::isNextToDead(it->id(), iSetup)) {
+	indexToStore.push_back(it->id());
+      }
+    } 
 
+    if (keepNextToBoundary_){
+      // keep channels around EB/EE boundary
+      if (it->id().subdetId() == EcalBarrel){
+	EBDetId ebid(it->id());
+	if (abs(ebid.ieta())== 85)
+	  indexToStore.push_back(it->id());
+      } else {
+     
+	if (EEDetId::isNextToRingBoundary(it->id()))
+	  indexToStore.push_back(it->id());
+      }
+
+    }
+    
   }
+
+  //unify the vector
+  std::sort(indexToStore.begin(),indexToStore.end());
+  std::unique(indexToStore.begin(),indexToStore.end());
   
-  //  std::cout << "Interesting DetId Collection size is " << detIdCollection->size() <<  " BCs are " << pClusters->size() << std::endl;
+  std::auto_ptr< DetIdCollection > detIdCollection (new DetIdCollection(indexToStore) ) ;
+
+ 
   iEvent.put( detIdCollection, interestingDetIdCollection_ );
 
 }
